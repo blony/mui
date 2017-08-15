@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+	</head>
+	<style type="text/css">
+		 header {
+			 	background-color: #007AFF !important;
+			 }
+			  header h1 {
+			 	color: #fff !important;
+			 }
+			 .mui-icon-left-nav {
+			 	color: #FFF;
+			 }
+			 
+			 /*水质解释表*/
+			 .toptable {
+			 	margin: 50px 0 0 0;
+			 	
+			 }
+			 .toptable table  {
+			 	width: 94%;
+			 	margin-left: 3%;
+			 }
+			 .toptable table tr {
+			 	height: 2.6rem;
+			 }
+			 .toptable table tr td {
+			 	padding: 10px 0;
+			 }
+			 .toptable table tr td:last-child {
+			 	border-bottom: 1px solid #f0f0f0;
+			 }
+			 .toptable table tr td span {
+			 	display: inline-block;
+			 	width: 1.8rem;
+			 	height: 1.8rem;
+			 	border-radius: 50%;
+			 	color: #FFF;
+			 	margin: 0 1rem;
+			 	text-align: center;
+			 	line-height: 1.5rem;
+			 	font-size: 0.8rem;
+			 }
+			 
+			 .content {
+			 	width: 92%;
+			 	margin:2% 4%;
+			 }
+			 
+			 
+			 
+			 .btmtable {
+			 	margin: 10px 0;
+			 }
+			 
+			 .btmtable table {
+			 	width: 100%;
+			 	text-align: center;
+			 }
+			  .btmtable table tr{
+			 	height: 2rem;
+			 }
+			 .btmtable table tr:nth-child(odd){
+			 	background-color: #f0f0f0;
+			 }
+			 .btmtable table th {
+			 	background-color: rgba(0,255,0,0.1);
+			 	color: limegreen;
+			 	font-weight: 400;
+			 }
+			 .mui-card table tr th:first-child, .mui-card table tr td:first-child {
+			 	text-align: left;
+			 }
+	</style>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 id="title" class="mui-title">水质类别说明</h1>
+		</header>
+		<div class="mui-card toptable">
+		<table>
+			<tr>
+				<td>
+					<span style="background-color: skyblue;">Ⅰ</span>
+				</td>
+				<td>主要适用于源头水、国家自然保护区；</td>
+			</tr>
+			<tr>
+				<td>
+					<span style="background-color:deepskyblue;">Ⅱ</span>
+				</td>
+				<td>主要适用于集中式生活用水地表水源地一级保护区、珍惜水生生物栖息地、鱼虾类产场、仔稚幼鱼的索饵场等；</td>
+			</tr>
+			<tr>
+				<td>
+					<span style="background-color: yellowgreen;">Ⅲ</span>
+				</td>
+				<td>主要适用于集中式生活饮用水地表水源地二级保护区、鱼虾类越冬场、洄游通道、水产养殖区等渔业水域及游泳区；</td>
+			</tr>
+			<tr>
+				<td>
+					<span style="background-color: green;">Ⅳ</span>
+				</td>
+				<td>主要适用于一般工业用水区及人体非直接接触的娱乐用水区；</td>
+			</tr>
+			<tr>
+				<td>
+					<span style="background-color: orange;">Ⅴ</span>
+				</td>
+				<td>主要适用于农业用水区及一般景观要求水域；</td>
+			</tr>
+			<tr>
+				<td>
+					<span style="background-color: orangered;">劣Ⅴ</span>
+				</td>
+				<td>污染程度已超过Ⅴ类的水；</td>
+			</tr>
+		</table>
+		</div>
+		<div class="content" >
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;对应地表水上述流泪水域功能，将地表水环境质量标准基本项目标准值分为六类，不同功能类别分别执行相应类别的标准值。水域功能类别高的标准值严
+			于水域功能类别低的标准值。同一水域兼有多类使用功能的，执行最高功能类别对应的标准值。实现水域功能与达功能类别标准为同一含义。<br />
+			注：水质分类方案依据国家地表水环境质量标准（GB 3838-2002)
+		</div>
+		<div class="mui-card btmtable">
+			<table>
+				<tr>
+					<th>标准值（MG/L）</th>
+					<th>Ⅰ类</th>
+					<th>Ⅱ类</th>
+					<th>Ⅲ类</th>
+					<th>Ⅳ类</th>
+					<th>Ⅴ类</th>
+				</tr>
+				<tr>
+					<td>溶解氧</td>
+					<td>7.5</td>
+					<td>6</td>
+					<td>5</td>
+					<td>3</td>
+					<td>2</td>
+				</tr>
+				<tr>
+					<td>高锰酸指数</td>
+					<td>2</td>
+					<td>4</td>
+					<td>6</td>
+					<td>10</td>
+					<td>15</td>
+				</tr>
+				<tr>
+					<td>铵盐</td>
+					<td>0.15</td>
+					<td>0.5</td>
+					<td>1.0</td>
+					<td>1.5</td>
+					<td>2.0</td>
+				</tr>
+				<tr>
+					<td>总磷</td>
+					<td>0.02</td>
+					<td>0.1</td>
+					<td>0.2</td>
+					<td>0.3</td>
+					<td>0.4</td>
+				</tr>
+			</table>
+		</div>
+		
+		
+		
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init({
+				swipeBack:true //启用右滑关闭功能
+			})
+		</script>
+	</body>
+
+</html>

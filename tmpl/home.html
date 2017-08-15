@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>首页</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<style>
+			html,body {
+				background-color: #efeff4;
+			}
+			
+			.riverlts table {
+				margin-bottom: 10px;
+			}
+			.riverlts table tr td {
+				width: 6%;
+				height: 4px;
+			}
+			.riverlts a {
+				float: right;
+				margin-bottom: 5px;
+			}
+			.title-top {
+				overflow: hidden;
+				margin-top: 1rem;
+			}
+			.title-top h4 {
+				float: left;
+				margin-left: 0.8rem;
+				font-size:1rem;
+				
+			}
+			.title-top .mui-btn-primary {
+				float: right;
+				font-size: 0.8rem;
+				margin-right: 15px;
+			}
+			
+			/*列表样式制作*/
+			.table-lts {
+				margin: 0;
+				margin-top: 10px;
+			}
+			.table-lts table {
+				width: 100%;
+			}
+			.table-lts table tr td {
+				width: 50%;
+				height: 5rem;
+				overflow: hidden;
+				position: relative;
+				border-bottom: 1px solid #f0f0f0;
+			}
+			.table-lts table tr td:first-child {
+				
+				border-right: 1px solid #f0f0f0;
+			}
+			.table-lts table tr td p{
+				width: 9rem;
+				margin-left: 0.6rem;
+				margin-top: 1rem;
+				line-height: 0.9rem;
+				font-weight: 600;
+			}
+			.table-lts table tr td h6 {
+				margin-left: 0.6rem;
+				line-height: 0.5rem;
+			}
+			.table-lts table tr td  span{
+				position: absolute;
+				top: 45%;
+				right: 10%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="mui-content">
+			<img src="../images/homeTOP.png" style="width: 100%;"/>
+			<div class="mui-card riverlts" style="margin: 0;">
+					<div class="mui-card-content-inner">
+					<table>
+					<tr>
+						<th>Ⅰ</th>
+						<th>Ⅱ</th>
+						<th>Ⅲ</th>
+						<th>Ⅳ</th>
+						<th>Ⅴ</th>
+						<th>劣Ⅴ</th>
+					</tr>
+					<tr>
+						<td style="background-color: skyblue;"></td>
+						<td style="background-color: blue;"></td>
+						<td style="background-color: yellowgreen;"></td>
+						<td style="background-color: green;"></td>
+						<td style="background-color: orange;"></td>
+						<td style="background-color: orangered;"></td>
+					</tr>
+				</table>
+				<a href="homepage/waterquality.html"><span class="mui-icon mui-icon-help"></span>水质类别说明</a>
+					</div>
+			</div>
+			<div class="title-top">	
+					<h4>河道水质信息</h4>
+					<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">
+				查看所有河道
+				</button>
+				</div>
+				<div class="mui-card table-lts">
+					<table border="0">
+						<tr>
+							<td style=";">
+								<p>钱塘江（西湖段）</p>
+								<h6>重要区级河道</h6>
+								<span class="mui-badge mui-badge-primary">Ⅰ</span>
+							</td>
+							<td>
+								<p>钱塘江（西湖-转塘街道段）</p>
+								<h6>重要区级河道</h6>
+								<span class="mui-badge mui-badge-primary">Ⅱ</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>钱塘江（西湖段）</p>
+								<h6>重要区级河道</h6>
+								<span class="mui-badge mui-badge-primary">Ⅳ</span>
+							</td>
+							<td>
+								<p>钱塘江（西湖-转塘街道段）</p>
+								<h6>重要区级河道</h6>
+								<span class="mui-badge mui-badge-primary">Ⅱ</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>钱塘江（西湖段）</p>
+								<h6>重要区级河道</h6>
+								<span class="mui-badge mui-badge-primary">劣Ⅴ</span>
+							</td>
+							<td>
+								<p>钱塘江（西湖-转塘街道段）</p>
+								<h6>重要区级河道</h6>
+								<span class="mui-badge mui-badge-primary">Ⅴ</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>钱塘江（西湖段）</p>
+								<h6>重要区级河道</h6>
+								<span class="mui-badge mui-badge-primary">Ⅱ</span>
+							</td>
+							<td>
+								<p>钱塘江（西湖-转塘街道段）</p>
+								<h6>重要区级河道</h6>
+								<span class="mui-badge mui-badge-primary">Ⅰ</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>钱塘江（西湖段）</p>
+								<h6>重要区级河道</h6>
+								<span class="mui-badge mui-badge-primary">Ⅱ</span>
+							</td>
+							<td>
+								<p>钱塘江（西湖-转塘街道段）</p>
+								<h6>重要区级河道</h6>
+								<span class="mui-badge mui-badge-primary">Ⅱ</span>
+							</td>
+						</tr>
+					</table>
+					<!--<p>何谓webview模式？其实就是每个选项卡内容都是一个独立的webview，彼此之间互相独立、互不影响；
+					对于较为复杂的业务系统，推荐使用该模式。</p>
+				<p>基于webview模式的选项卡，支持原生加速的下拉刷新，点击第二个选项卡（“消息”），切换选项卡，体验下拉刷新；</p>-->
+				</div>
+				
+				<div class="title-top">	
+					<h4>断面水质信息</h4>
+					<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">
+				查看所有断面
+				</button>
+				</div>
+				<div class="mui-card table-lts">
+					<table border="0">
+						<tr>
+							<td>
+								<p>钱塘江（西湖段）</p>
+								<h6>重要区级河道</h6>
+								<span class="mui-badge mui-badge-primary">Ⅱ</span>
+							</td>
+							<td>
+								<p>钱塘江（西湖-转塘街道段）</p>
+								<h6>重要区级河道</h6>
+								<span class="mui-badge mui-badge-primary">Ⅴ</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>钱塘江（西湖段）</p>
+								<h6>重要区级河道</h6>
+								<span class="mui-badge mui-badge-primary">Ⅱ</span>
+							</td>
+							<td>
+								<p>钱塘江（西湖-转塘街道段）</p>
+								<h6>重要区级河道</h6>
+								<span class="mui-badge mui-badge-primary">Ⅴ</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>钱塘江（西湖段）</p>
+								<h6>重要区级河道</h6>
+								<span class="mui-badge mui-badge-primary">Ⅰ</span>
+							</td>
+							<td>
+								<p>钱塘江（西湖-转塘街道段）</p>
+								<h6>重要区级河道</h6>
+								<span class="mui-badge mui-badge-primary">Ⅲ</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>钱塘江（西湖段）</p>
+								<h6>重要区级河道</h6>
+								<span class="mui-badge mui-badge-primary">Ⅳ</span>
+							</td>
+							<td>
+								<p>钱塘江（西湖-转塘街道段）</p>
+								<h6>重要区级河道</h6>
+								<span class="mui-badge mui-badge-primary">Ⅳ</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>钱塘江（西湖段）</p>
+								<h6>重要区级河道</h6>
+								<span class="mui-badge mui-badge-primary">Ⅱ</span>
+							</td>
+							<td>
+								<p>钱塘江（西湖-转塘街道段）</p>
+								<h6>重要区级河道</h6>
+								<span class="mui-badge mui-badge-primary">Ⅲ</span>
+							</td>
+						</tr>
+					</table>
+				</div>
+				
+			
+		</div>
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script>
+		mui.init({
+			swipeBack:true //启用右滑关闭功能
+		});
+		$(document).ready(function(){
+			$('.table-lts .mui-badge').each(function(){
+				var index =$(this);
+				if(index.text() == 'Ⅰ'){
+					index.css('background-color','skyblue');
+				}else if(index.text() == 'Ⅱ') {
+					index.css('background-color','blue');
+				}else if(index.text() == 'Ⅲ') {
+					index.css('background-color','yellowgreen');
+				}else if(index.text() == 'Ⅳ') {
+					index.css('background-color','green');
+				}else if(index.text() == 'Ⅴ') {
+					index.css('background-color','orange');
+				}else if(index.text() == '劣Ⅴ') {
+					index.css('background-color','orangered');
+				}
+				
+			});
+		})
+	</script>
+</html>

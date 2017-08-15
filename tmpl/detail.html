@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 id="title" class="mui-title"></h1>
+		</header>
+		<div id="dataBox" class="mui-content mui-content-padded">
+		    <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem commodi omnis debitis accusamus dicta praesentium magni odio vitae tempore hic fuga voluptatum dolores incidunt. Cum atque distinctio nemo dicta sed.</p>
+		    <p><img src="../images/1.jpg" alt="" /></p>
+		    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem commodi omnis debitis accusamus dicta praesentium magni odio vitae tempore hic fuga voluptatum dolores incidunt. Cum atque distinctio nemo dicta sed.</p>
+		    <p><img src="../images/1.jpg" alt="" /></p>
+		    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem commodi omnis debitis accusamus dicta praesentium magni odio vitae tempore hic fuga voluptatum dolores incidunt. Cum atque distinctio nemo dicta sed.</p>
+		    <p><img src="../images/1.jpg" alt="" /></p>-->
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			var title = document.querySelector('#title');
+			var dataBox = document.querySelector('#dataBox');
+//			监听自定义事件getDataId
+			window.addEventListener('getDataId',function(e){
+				dataBox.innerHTML = '';//清空容器内容
+				var dataId = e.detail.id;
+//				打印列表页传过来的值
+				console.log(dataId);
+//				通过id向服务器发起请求
+//				mui.post('data/detail.json',{id:dataId},function(data){},'json')
+//				模拟请求数据
+				mui.post('../data/data'+dataId+'.json',{},function(data){
+//					将json对象转换成字符串类型的json对象
+					console.log(JSON.stringify(data))//json转字符串类型
+//					数据填充到页面
+					title.innerHTML = data.title;
+					for(var i = 0;i<3;i++){
+						var p = document.createElement('p');
+						p.innerHTML = data.info;
+						var p2 = document.createElement('p');
+						p2.innerHTML = '<img src="../images/'+data.img+'" alt="" />'
+						dataBox.appendChild(p)
+						dataBox.appendChild(p2)
+					}
+				},'json')
+			})
+			
+		</script>
+	</body>
+
+</html>

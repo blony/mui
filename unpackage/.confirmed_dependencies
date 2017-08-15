@@ -1,0 +1,93 @@
+{
+	"index.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"tab-webview-subpage-about.html",
+			"fonts/mui.ttf",
+			"home.html",
+			"js/iconfont.js",
+			"css/iconfont.css",
+			"fonts/iconfont.ttf",
+			"tmpl/home.html"
+		],
+		"refer": [
+			"tab-webview-subpage-about.html",
+			"tab-webview-subpage-setting.html",
+			"tab-webview-subpage-chat.html",
+			"tab-webview-subpage-contact.html",
+			"home.html",
+			"news.html",
+			"user.html",
+			"tousu.html",
+			"tmpl/news.html",
+			"tmpl/user.html",
+			"tmpl/home.html",
+			"tmpl/tousu.html"
+		]
+	},
+	"tab-webview-subpage-about.html": {
+		"resources": [
+			"css/mui.min.css"
+		]
+	},
+	"home.html": {
+		"resources": [
+			"js/jquery.min.js",
+			"images/homeTOP.png",
+			"css/mui.min.css",
+			"homepage/waterquality.html"
+		],
+		"refer": [
+			"homepage/waterquality.html"
+		]
+	},
+	"news.html": {
+		"resources": [
+			"css/mui.min.css",
+			"js/mui.pullToRefresh.js",
+			"js/mui.pullToRefresh.material.js",
+			"images/river.png",
+			"images/user.png",
+			"images/news.png"
+		]
+	},
+	"homepage/waterquality.html": {
+		"resources": [
+			"css/mui.min.css"
+		]
+	},
+	"tmpl/news.html": {
+		"resources": [
+			"js/mui.pullToRefresh.js",
+			"js/mui.pullToRefresh.material.js",
+			"css/mui.min.css",
+			"images/river.png",
+			"tmpl/news/newsinfo.html",
+			"images/river2.png",
+			"images/river3.png",
+			"images/river4.png",
+			"images/river1.png",
+			"data/newsdata/news.json",
+			"images/news.png"
+		],
+		"refer": [
+			"tmpl/detail.html",
+			"tmpl/news/newsinfo.html",
+			"tmpl/news/notices.html",
+			"tmpl/news/dailyknows.html"
+		]
+	},
+	"tmpl/home.html": {
+		"resources": [
+			"css/mui.min.css",
+			"js/jquery.min.js",
+			"images/homeTOP.png"
+		]
+	},
+	"tmpl/news/newsinfo.html": {
+		"resources": [
+			"css/mui.min.css"
+		]
+	}
+}

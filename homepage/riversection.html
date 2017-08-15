@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<!--App自定义的css-->
+		<!--<link rel="stylesheet" type="text/css" href="../css/app.css" />-->
+		<style>
+			header {
+				background-color: #007AFF !important;
+			}
+			
+			header h1 {
+				color: #fff !important;
+			}
+			
+			.mui-icon-left-nav {
+				color: #FFF;
+			}
+			
+			.mui-card .mui-control-content {
+				padding: 10px;
+			}
+			
+			.mui-control-content {
+				height: 400px;
+			}
+			
+			.mui-pull-top-pocket {
+				top: 0 !important;
+			}
+			/*列表样式*/
+			
+			.lts:after {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				height: 1px;
+				content: '';
+				-webkit-transform: scaleY(.5);
+				transform: scaleY(.5);
+				background-color: #c8c7cc;
+			}
+			
+			.lts {
+				position: relative;
+			}
+			
+			.lts div {
+				width: 94%;
+				margin-left: 3%;
+			}
+			
+			.lts table {
+				width: 100%;
+				text-align: center;
+				margin: 1rem 0;
+			}
+			
+			.lts table tr th {
+				color: #4CD964;
+			}
+			
+			.lts table tr td {
+				background-color: #f0f0f0;
+			}
+			/*水质分级样式*/
+			.riverlts {
+				overflow: hidden;
+			}
+			.riverlts table {
+				margin-bottom: 10px;
+				width: 96%;
+				margin-left: 2%;
+			}
+			
+			.riverlts table tr td {
+				width: 6%;
+				height: 4px;
+			}
+			
+			.riverlts a {
+				float: right;
+				margin-bottom: 1rem;
+				margin-right: 0.5rem;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">河道断面</h1>
+		</header>
+		<div class="mui-content">
+			<div style="padding: 10px 10px;">
+				<div id="segmentedControl" class="mui-segmented-control">
+					<a class="mui-control-item mui-active" href="#item1">列表</a>
+					<a class="mui-control-item" href="#item2">地图</a>
+
+				</div>
+			</div>
+			<div>
+				<div id="item1" class="mui-control-content mui-active">
+					<h5 style="margin-bottom: 10px;height: 1.2rem;position: absolute;right: 10px;">最后更新于2017-08-11</h5>
+					<div id="pullrefresh" class="mui-content mui-scroll-wrapper" style="margin-top: 20px;">
+						<div class="mui-scroll">
+							<!--数据列表-->
+							<ul class="mui-table-view mui-table-view-chevron">
+								<li class="lts">
+									<div>
+										<h4 style="display: inline-block;margin-right: 2rem;">义桥</h4>
+										<span class="mui-badge mui-badge-primary">Ⅱ</span>
+										<h5 style="float: right;">行政断面</h5>
+										<table>
+											<tr>
+												<th>DO</th>
+												<th>COD<sub>Mn</sub></th>
+												<th>NH<sub>3</sub>-N</th>
+												<th>TP</th>
+											</tr>
+											<tr>
+												<td>0.000</td>
+												<td>2.300</td>
+												<td>0.000</td>
+												<td>0.000</td>
+											</tr>
+										</table>
+										<h5 style="padding-bottom: 1rem;">指数单位：mg/L</h5>
+									</div>
+								</li>
+								<li class="lts">
+									<div>
+										<h4 style="display: inline-block;margin-right: 2rem;">义桥</h4>
+										<span class="mui-badge mui-badge-primary">Ⅱ</span>
+										<h5 style="float: right;">行政断面</h5>
+										<table>
+											<tr>
+												<th>DO</th>
+												<th>COD<sub>Mn</sub></th>
+												<th>NH<sub>3</sub>-N</th>
+												<th>TP</th>
+											</tr>
+											<tr>
+												<td>0.000</td>
+												<td>2.300</td>
+												<td>0.000</td>
+												<td>0.000</td>
+											</tr>
+										</table>
+										<h5 style="padding-bottom: 1rem;">指数单位：mg/L</h5>
+									</div>
+								</li>
+								<li class="lts">
+									<div>
+										<h4 style="display: inline-block;margin-right: 2rem;">义桥</h4>
+										<span class="mui-badge mui-badge-primary">Ⅱ</span>
+										<h5 style="float: right;">行政断面</h5>
+										<table>
+											<tr>
+												<th>DO</th>
+												<th>COD<sub>Mn</sub></th>
+												<th>NH<sub>3</sub>-N</th>
+												<th>TP</th>
+											</tr>
+											<tr>
+												<td>0.000</td>
+												<td>2.300</td>
+												<td>0.000</td>
+												<td>0.000</td>
+											</tr>
+										</table>
+										<h5 style="padding-bottom: 1rem;">指数单位：mg/L</h5>
+									</div>
+								</li>
+								<li class="lts">
+									<div>
+										<h4 style="display: inline-block;margin-right: 2rem;">义桥</h4>
+										<span class="mui-badge mui-badge-primary">Ⅱ</span>
+										<h5 style="float: right;">行政断面</h5>
+										<table>
+											<tr>
+												<th>DO</th>
+												<th>COD<sub>Mn</sub></th>
+												<th>NH<sub>3</sub>-N</th>
+												<th>TP</th>
+											</tr>
+											<tr>
+												<td>0.000</td>
+												<td>2.300</td>
+												<td>0.000</td>
+												<td>0.000</td>
+											</tr>
+										</table>
+										<h5 style="padding-bottom: 1rem;">指数单位：mg/L</h5>
+									</div>
+								</li>
+								<li class="lts">
+									<div>
+										<h4 style="display: inline-block;margin-right: 2rem;">义桥</h4>
+										<span class="mui-badge mui-badge-primary">Ⅱ</span>
+										<h5 style="float: right;">行政断面</h5>
+										<table>
+											<tr>
+												<th>DO</th>
+												<th>COD<sub>Mn</sub></th>
+												<th>NH<sub>3</sub>-N</th>
+												<th>TP</th>
+											</tr>
+											<tr>
+												<td>0.000</td>
+												<td>2.300</td>
+												<td>0.000</td>
+												<td>0.000</td>
+											</tr>
+										</table>
+										<h5 style="padding-bottom: 1rem;">指数单位：mg/L</h5>
+									</div>
+								</li>
+								<li class="lts">
+									<div>
+										<h4 style="display: inline-block;margin-right: 2rem;">义桥</h4>
+										<span class="mui-badge mui-badge-primary">Ⅱ</span>
+										<h5 style="float: right;">行政断面</h5>
+										<table>
+											<tr>
+												<th>DO</th>
+												<th>COD<sub>Mn</sub></th>
+												<th>NH<sub>3</sub>-N</th>
+												<th>TP</th>
+											</tr>
+											<tr>
+												<td>0.000</td>
+												<td>2.300</td>
+												<td>0.000</td>
+												<td>0.000</td>
+											</tr>
+										</table>
+										<h5 style="padding-bottom: 1rem;">指数单位：mg/L</h5>
+									</div>
+								</li>
+								<li class="lts">
+									<div>
+										<h4 style="display: inline-block;margin-right: 2rem;">义桥</h4>
+										<span class="mui-badge mui-badge-primary">Ⅱ</span>
+										<h5 style="float: right;">行政断面</h5>
+										<table>
+											<tr>
+												<th>DO</th>
+												<th>COD<sub>Mn</sub></th>
+												<th>NH<sub>3</sub>-N</th>
+												<th>TP</th>
+											</tr>
+											<tr>
+												<td>0.000</td>
+												<td>2.300</td>
+												<td>0.000</td>
+												<td>0.000</td>
+											</tr>
+										</table>
+										<h5 style="padding-bottom: 1rem;">指数单位：mg/L</h5>
+									</div>
+								</li>
+								<li class="lts">
+									<div>
+										<h4 style="display: inline-block;margin-right: 2rem;">义桥</h4>
+										<span class="mui-badge mui-badge-primary">Ⅱ</span>
+										<h5 style="float: right;">行政断面</h5>
+										<table>
+											<tr>
+												<th>DO</th>
+												<th>COD<sub>Mn</sub></th>
+												<th>NH<sub>3</sub>-N</th>
+												<th>TP</th>
+											</tr>
+											<tr>
+												<td>0.000</td>
+												<td>2.300</td>
+												<td>0.000</td>
+												<td>0.000</td>
+											</tr>
+										</table>
+										<h5 style="padding-bottom: 1rem;">指数单位：mg/L</h5>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="item2" class="mui-control-content">
+					<div class="mui-table-view riverlts">
+						<table>
+							<tr>
+								<th>Ⅰ</th>
+								<th>Ⅱ</th>
+								<th>Ⅲ</th>
+								<th>Ⅳ</th>
+								<th>Ⅴ</th>
+								<th>劣Ⅴ</th>
+							</tr>
+							<tr>
+								<td style="background-color: skyblue;"></td>
+								<td style="background-color: blue;"></td>
+								<td style="background-color: yellowgreen;"></td>
+								<td style="background-color: green;"></td>
+								<td style="background-color: orange;"></td>
+								<td style="background-color: orangered;"></td>
+							</tr>
+						</table>
+						<a href="homepage/waterquality.html"><span class="mui-icon mui-icon-help"></span>水质类别说明</a>
+					</div>
+					<img src="../images/testmap.png" style="width: 100%;height: 85%;"/>
+				</div>
+		</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('.mui-control-content').height($(window).height() * 0.85);
+			})
+		</script>
+		<script>
+			mui.init({
+				pullRefresh: {
+					container: '#pullrefresh',
+					down: {
+						callback: pulldownRefresh
+					},
+					up: {
+						contentrefresh: '正在加载...',
+						callback: pullupRefresh
+					}
+				}
+			});
+			/**
+			 * 下拉刷新具体业务实现
+			 */
+			function pulldownRefresh() {
+				setTimeout(function() {
+					var table = document.body.querySelector('.mui-table-view');
+					var cells = document.body.querySelectorAll('.mui-table-view-cell');
+					for(var i = cells.length, len = i + 3; i < len; i++) {
+						var li = document.createElement('li');
+						li.className = 'mui-table-view-cell';
+						li.innerHTML = '<a class="mui-navigate-right">Item ' + (i + 1) + '</a>';
+						//下拉刷新，新纪录插到最前面；
+						table.insertBefore(li, table.firstChild);
+					}
+					mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
+				}, 1500);
+			}
+			var count = 0;
+			/**
+			 * 上拉加载具体业务实现
+			 */
+			function pullupRefresh() {
+				setTimeout(function() {
+					mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
+					var table = document.body.querySelector('.mui-table-view');
+					var cells = document.body.querySelectorAll('.mui-table-view-cell');
+					for(var i = cells.length, len = i + 5; i < len; i++) {
+						var li = document.createElement('li');
+						li.className = 'mui-table-view-cell';
+						li.innerHTML = '<a class="mui-navigate-right">Item ' + (i + 1) + '</a>';
+						table.appendChild(li);
+					}
+				}, 1500);
+			}
+		</script>
+
+	</body>
+
+</html>
