@@ -89,5 +89,26 @@
 		"resources": [
 			"css/mui.min.css"
 		]
+	},
+	"tmpl/detail.html": {
+		"resources": [
+			"data/data01.json",
+			"css/mui.min.css",
+			"data/data04.json",
+			"data/data02.json",
+			"data/data03.json"
+		]
+	},
+	"tmpl/user.html": {
+		"resources": [
+			"images/river4.jpg",
+			"images/关于.png",
+			"images/收藏.png",
+			"images/用户.png",
+			"images/userlogin.png",
+			"css/mui.min.css",
+			"images/like.png",
+			"images/about.png"
+		]
 	}
 }

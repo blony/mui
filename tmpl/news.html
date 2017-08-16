@@ -543,9 +543,11 @@
 								callback:  function() {
 									var self = this;
 									setTimeout(function() {
-//										var ul = self.element.querySelector('.mui-table-view');
+//										
+										var ul = self.element.querySelector('.mui-table-view');
 //										ul.insertBefore(createFragment(ul, index, 10, true), ul.firstChild);
 										self.endPullDownToRefresh();
+										
 									}, 1000);
 								}
 							},
@@ -565,10 +567,6 @@
 					});
 
 					var createFragment = function(ul, index, count, reverse) {
-//						console.log(ul);
-//						console.log(index);
-//						console.log(count);
-//						console.log(reverse);
 //						var length = ul.querySelectorAll('li').length;
 //						var fragment = document.createDocumentFragment();
 						var li;
@@ -578,7 +576,7 @@
 					//console.log(data);
 	//				将数据填充到页面
 					for(var i = 0;i<data.length;i++){
-						var li = document.createElement('li');
+						li = document.createElement('li');
 						li.className = 'mui-table-view-cell mui-media';
 						li.innerHTML = '<a data-id ="'+data[i].dataId+'" class="mui-navigate-right" href="javascript:;">\
 											<img class="mui-media-object mui-pull-left" src="../images/'+data[i].img+'">\
@@ -625,7 +623,7 @@
 //			}
 //			点击列表跳转详情页
 				var detail;
-				mui('#productListBox').on('tap','a',function(){
+				mui('#scroll1').on('tap','a',function(){
 //					获取当前a的数据id
 					var dataId = this.getAttribute('data-id');
 //					打开详情页
