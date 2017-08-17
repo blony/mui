@@ -55,7 +55,7 @@
 		<div class="mui-content">
 			<div class="top-main">
 				
-				<img src="../images/userlogin.png"/>
+				<img id="tologin" src="../images/userlogin.png"/>
 				<h4>未登录，请点击头像登录或注册</h4>
 			</div>
 			
@@ -91,5 +91,22 @@
 			//触发主页面的gohome事件
 			mui.fire(main,'gohome');
 		});
+		(function(){
+			//登录页跳转
+				var tologin = document.getElementById('tologin');
+				tologin.addEventListener('tap',function(){
+//					打开详情页
+					mui.openWindow({
+						id:'login.html',
+						url:'../userpage/login.html'
+					})
+//					获取详情webview
+					tologin = plus.webview.getWebviewById('login.html')
+//					通过自定义事件传值
+//					mui.fire(waterquality,'getDataId',{
+//						id:dataId
+//					})
+				});
+		})(mui);
 	</script>
 </html>

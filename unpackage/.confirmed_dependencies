@@ -83,6 +83,10 @@
 			"css/mui.min.css",
 			"js/jquery.min.js",
 			"images/homeTOP.png"
+		],
+		"refer": [
+			"homepage/waterquality.html",
+			"homepage/riversection.html"
 		]
 	},
 	"tmpl/news/newsinfo.html": {
@@ -102,13 +106,46 @@
 	"tmpl/user.html": {
 		"resources": [
 			"images/river4.jpg",
-			"images/关于.png",
-			"images/收藏.png",
-			"images/用户.png",
+			"images/s�.png",
+			"images/6�.png",
+			"images/(7.png",
 			"images/userlogin.png",
 			"css/mui.min.css",
 			"images/like.png",
 			"images/about.png"
+		],
+		"refer": [
+			"userpage/login.html"
+		]
+	},
+	"homepage/riversection.html": {
+		"resources": [
+			"images/testmap.png",
+			"css/mui.min.css"
+		]
+	},
+	"userpage/login.html": {
+		"resources": [
+			"userpage/js/app.js",
+			"userpage/js/mui.enterfocus.js",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"index.html",
+			"userpage/reg.html",
+			"userpage/forget_password.html"
+		]
+	},
+	"userpage/reg.html": {
+		"resources": [
+			"userpage/css/style.css",
+			"css/mui.min.css"
+		]
+	},
+	"userpage/forget_password.html": {
+		"resources": [
+			"userpage/css/style.css",
+			"css/mui.min.css"
 		]
 	}
 }

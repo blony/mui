@@ -93,14 +93,14 @@
 					</tr>
 					<tr>
 						<td style="background-color: skyblue;"></td>
-						<td style="background-color: blue;"></td>
+						<td style="background-color: deepskyblue;"></td>
 						<td style="background-color: yellowgreen;"></td>
-						<td style="background-color: green;"></td>
+						<td style="background-color: gold;"></td>
 						<td style="background-color: orange;"></td>
 						<td style="background-color: orangered;"></td>
 					</tr>
 				</table>
-				<a href="homepage/waterquality.html"><span class="mui-icon mui-icon-help"></span>水质类别说明</a>
+				<a id="waterquality" href="javascript:;"><span class="mui-icon mui-icon-help"></span>水质类别说明</a>
 					</div>
 			</div>
 			<div class="title-top">	
@@ -179,7 +179,7 @@
 				
 				<div class="title-top">	
 					<h4>断面水质信息</h4>
-					<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">
+					<button id="riversection" type="button" class="mui-btn mui-btn-primary mui-btn-outlined">
 				查看所有断面
 				</button>
 				</div>
@@ -255,19 +255,27 @@
 	<script type="text/javascript" src="../js/jquery.min.js"></script>
 	<script>
 		mui.init({
-			swipeBack:true //启用右滑关闭功能
-		});
+				preloadPages:[
+				{
+					id:'waterquality.html',
+					url:'../homepage/waterquality.html'
+				},
+				{
+					id:'riversection.html',
+					url:'../homepage/riversection.html'
+				}]
+			});
 		$(document).ready(function(){
 			$('.table-lts .mui-badge').each(function(){
 				var index =$(this);
 				if(index.text() == 'Ⅰ'){
 					index.css('background-color','skyblue');
 				}else if(index.text() == 'Ⅱ') {
-					index.css('background-color','blue');
+					index.css('background-color','deepskyblue');
 				}else if(index.text() == 'Ⅲ') {
 					index.css('background-color','yellowgreen');
 				}else if(index.text() == 'Ⅳ') {
-					index.css('background-color','green');
+					index.css('background-color','gold');
 				}else if(index.text() == 'Ⅴ') {
 					index.css('background-color','orange');
 				}else if(index.text() == '劣Ⅴ') {
@@ -275,6 +283,49 @@
 				}
 				
 			});
-		})
+		});
+		(function($){
+			//阻尼系数
+				var deceleration = mui.os.ios ? 0.003 : 0.0009;
+				$('.mui-scroll-wrapper').scroll({
+					bounce: false,
+					indicators: true, //是否显示滚动条
+					deceleration: deceleration
+				});
+//				点击列表跳转详情页
+
+				//水质说明页跳转
+				var waterq = document.getElementById('waterquality');
+				waterq.addEventListener('tap',function(){
+//					打开详情页
+					mui.openWindow({
+						id:'waterquality.html',
+						url:'../homepage/waterquality.html'
+					})
+//					获取详情webview
+					waterq = plus.webview.getWebviewById('waterquality.html')
+//					通过自定义事件传值
+//					mui.fire(waterquality,'getDataId',{
+//						id:dataId
+//					})
+				});
+				
+				//河道断面页跳转
+				var riversec =document.getElementById('riversection');
+				riversec.addEventListener('tap',function(){
+					//打开详情页
+					mui.openWindow({
+						id:'riversection.html',
+						url:'../homepage/riversection.html'
+					})
+//					获取详情webview
+					riversec = plus.webview.getWebviewById('riversection.html')
+//					通过自定义事件传值
+//					mui.fire(waterquality,'getDataId',{
+//						id:dataId
+//					})
+				});
+
+		})(mui);
 	</script>
 </html>

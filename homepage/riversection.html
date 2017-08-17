@@ -92,6 +92,10 @@
 				margin-bottom: 1rem;
 				margin-right: 0.5rem;
 			}
+			
+			.mui-segmented-control .mui-control-item {
+    			line-height: 22px;
+   			 }
 		</style>
 	</head>
 
@@ -102,7 +106,7 @@
 		</header>
 		<div class="mui-content">
 			<div style="padding: 10px 10px;">
-				<div id="segmentedControl" class="mui-segmented-control">
+				<div id="segmentedControl" class="mui-segmented-control" >
 					<a class="mui-control-item mui-active" href="#item1">列表</a>
 					<a class="mui-control-item" href="#item2">地图</a>
 
@@ -296,8 +300,8 @@
 					</div>
 				</div>
 				<div id="item2" class="mui-control-content">
-					<div class="mui-table-view riverlts">
-						<table>
+					<div class="mui-table-view riverlts" style="margin-top: 10px;" >
+						<table style="margin-top: 20px;">
 							<tr>
 								<th>Ⅰ</th>
 								<th>Ⅱ</th>
@@ -308,14 +312,14 @@
 							</tr>
 							<tr>
 								<td style="background-color: skyblue;"></td>
-								<td style="background-color: blue;"></td>
+								<td style="background-color: deepskyblue;"></td>
 								<td style="background-color: yellowgreen;"></td>
-								<td style="background-color: green;"></td>
+								<td style="background-color: gold;"></td>
 								<td style="background-color: orange;"></td>
 								<td style="background-color: orangered;"></td>
 							</tr>
 						</table>
-						<a href="homepage/waterquality.html"><span class="mui-icon mui-icon-help"></span>水质类别说明</a>
+						<a id="waterquality" href="javascript:;"><span class="mui-icon mui-icon-help"></span>水质类别说明</a>
 					</div>
 					<img src="../images/testmap.png" style="width: 100%;height: 85%;"/>
 				</div>
@@ -330,6 +334,11 @@
 		</script>
 		<script>
 			mui.init({
+				preloadPages:[
+				{
+					id:'waterquality.html',
+					url:'waterquality.html'
+				}],
 				pullRefresh: {
 					container: '#pullrefresh',
 					down: {
@@ -341,6 +350,26 @@
 					}
 				}
 			});
+			
+			
+			(function($){
+				
+				//水质详情页跳转
+				var waterq = document.getElementById('waterquality');
+				waterq.addEventListener('tap',function(){
+//					打开详情页
+					mui.openWindow({
+						id:'waterquality.html',
+						url:'waterquality.html'
+					})
+//					获取详情webview
+					waterq = plus.webview.getWebviewById('waterquality.html')
+//					通过自定义事件传值
+//					mui.fire(waterquality,'getDataId',{
+//						id:dataId
+//					})
+				});
+			})(mui);
 			/**
 			 * 下拉刷新具体业务实现
 			 */
