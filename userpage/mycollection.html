@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+	</head>
+	<style type="text/css">
+		/*头部样式*/
+			 header {
+			 	background-color: #007AFF !important;
+			 }
+			  header h1 {
+			 	color: #fff !important;
+			 }
+			  .mui-icon-left-nav {
+			 	color: #FFF;
+			 }
+		/*删除图标样式*/
+		.delbtn {
+			width: 2.6rem;
+			height: 1.5rem;
+			display:block;
+			position: absolute;
+			top: 30%;
+			right: 0;
+			z-index: 99;
+		}
+	</style>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">我的收藏</h1>
+		</header>
+		<div class="mui-content">
+			
+			<ul class="mui-table-view mui-table-view-chevron">
+				<li class="mui-table-view-cell mui-media">
+					<img class="delbtn" src="../images/delete.png" />
+					<a>
+						<img class="mui-media-object mui-pull-left" src="../images/river1.png">
+						<div class="mui-media-body">
+							永定河
+							<p class='mui-ellipsis'>永定河位于北京市西郊，从河北省怀来县幽州村南流入北京市，流经门头沟区、石景山区、丰台区、房山区、大兴县，于大兴县崔指挥营村东出市境。</p>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<img class="delbtn" src="../images/delete.png" />
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../images/river4.png">
+						<div class="mui-media-body">
+							天堂河
+							<p class='mui-ellipsis'>天堂河发源于丰台区南天堂附近哈蟆洼，由永定河透堤水汇集成河。</p>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<img class="delbtn" src="../images/delete.png" />
+					<a>
+						<img class="mui-media-object mui-pull-left" src="../images/river3.png">
+						<div class="mui-media-body">
+							岔河
+							<p class='mui-ellipsis'>岔河位于大兴县东部。源于魏善庄乡赵庄子村西北七干闸，流经沙窝营村西入凤河，全长18公里，控制流域面积为56平方公里。</p>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<img class="delbtn" src="../images/delete.png" />
+					<a>
+						<img class="mui-media-object mui-pull-left" src="../images/river1.png">
+						<div class="mui-media-body">
+							新凤河
+							<p class='mui-ellipsis'>新凤河属凉水河支流，自大兴县芦城乡立堡分水闸流经该县5个乡镇，在烧饼庄汇入凉水河。</p>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<img class="delbtn" src="../images/delete.png" />
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../images/river2.png">
+						<div class="mui-media-body">
+							马草河
+							<p class='mui-ellipsis'>马草河位于丰台区境内，自东向西，经玉泉营、马家堡汇入凉水河，全长12．2公里，控制流域面积33平方公里。</p>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<img class="delbtn" src="../images/delete.png" />
+					<a>
+						<img class="mui-media-object mui-pull-left" src="../images/river4.png">
+						<div class="mui-media-body">
+							水衙沟
+							<p class='mui-ellipsis'>水衙沟位于丰台区卢沟桥乡境内。</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		
+	</body>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			
+		
+				var btndelete = document.querySelectorAll('.delbtn');
+				for (var i = 0; i<btndelete.length;i++) {
+					btndelete[i].addEventListener('tap',function(e){
+					console.log("111");	
+				});
+				};
+				
+
+		</script>
+</html>

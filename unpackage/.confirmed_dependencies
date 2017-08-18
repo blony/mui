@@ -69,7 +69,8 @@
 			"images/river4.png",
 			"images/river1.png",
 			"data/newsdata/news.json",
-			"images/news.png"
+			"images/news.png",
+			"images/user.png"
 		],
 		"refer": [
 			"tmpl/detail.html",
@@ -115,7 +116,9 @@
 			"images/about.png"
 		],
 		"refer": [
-			"userpage/login.html"
+			"userpage/login.html",
+			"login/login.html",
+			"userpage/mycollection.html"
 		]
 	},
 	"homepage/riversection.html": {
@@ -146,6 +149,36 @@
 		"resources": [
 			"userpage/css/style.css",
 			"css/mui.min.css"
+		]
+	},
+	"login/login.html": {
+		"resources": [
+			"js/login.js",
+			"css/mui.min.css",
+			"js/mui.enterfocus.js"
+		],
+		"refer": [
+			"login/reg.html",
+			"login/forget_password.html"
+		]
+	},
+	"login/forget_password.html": {
+		"resources": [
+			"css/mui.min.css"
+		]
+	},
+	"userpage/mycollection.html": {
+		"resources": [
+			"css/mui.css",
+			"images/delete.png"
+		]
+	},
+	"tmpl/tousu.html": {
+		"resources": [
+			"css/mui.min.css",
+			"images/processed.png",
+			"images/untreated.png",
+			"css/mui.css"
 		]
 	}
 }

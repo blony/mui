@@ -263,7 +263,8 @@
 					"images/river4.png",
 					"images/river1.png",
 					"data/newsdata/news.json",
-					"images/news.png"
+					"images/news.png",
+					"images/user.png"
 				],
 				"refer": [
 					"tmpl/detail.html",
@@ -314,7 +315,9 @@
 					"images/about.png"
 				],
 				"refer": [
-					"userpage/login.html"
+					"userpage/login.html",
+					"login/login.html",
+					"userpage/mycollection.html"
 				],
 				"priority": 0
 			},
@@ -354,14 +357,50 @@
 				],
 				"refer": [],
 				"priority": 0
+			},
+			"login/login.html": {
+				"resources": [
+					"js/login.js",
+					"css/mui.min.css",
+					"js/mui.enterfocus.js"
+				],
+				"refer": [
+					"login/reg.html",
+					"login/forget_password.html"
+				],
+				"priority": 0
+			},
+			"login/forget_password.html": {
+				"resources": [
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"userpage/mycollection.html": {
+				"resources": [
+					"css/mui.css",
+					"images/delete.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"tmpl/tousu.html": {
+				"resources": [
+					"css/mui.min.css",
+					"images/processed.png",
+					"images/untreated.png",
+					"css/mui.css"
+				],
+				"refer": [],
+				"priority": 0
 			}
 		},
 		"idle": {
 			"resources": [
 				"tab-webview-main.html",
 				"images/home.png",
-				"js/mui.js",
-				"css/mui.css"
+				"js/mui.js"
 			]
 		}
 	}

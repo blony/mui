@@ -61,7 +61,7 @@
 			
 			<ul class="user-table-view" style="margin: 20px 15px;border-top-left-radius:18px;border-bottom-left-radius:25px;">
 				<li class="mui-table-view-cell" >
-					<a class="mui-navigate-right">
+					<a id="mycollection" class="mui-navigate-right">
 						<img src="../images/like.png" style="display:block;width: 40px;height: 40px;position: absolute;top: 0;left: 0px;"/>
 						<p style="margin-left: 30px;font-weight: 800;">我的收藏</p>
 					</a>
@@ -98,10 +98,26 @@
 //					打开详情页
 					mui.openWindow({
 						id:'login.html',
-						url:'../userpage/login.html'
+						url:'../login/login.html'
 					})
 //					获取详情webview
 					tologin = plus.webview.getWebviewById('login.html')
+//					通过自定义事件传值
+//					mui.fire(waterquality,'getDataId',{
+//						id:dataId
+//					})
+				});
+				
+			//收藏页跳转
+				var mycollection = document.getElementById('mycollection');
+				mycollection.addEventListener('tap',function(){
+//					打开详情页
+					mui.openWindow({
+						id:'mycollection.html',
+						url:'../userpage/mycollection.html'
+					})
+//					获取详情webview
+					tologin = plus.webview.getWebviewById('mycollection.html')
 //					通过自定义事件传值
 //					mui.fire(waterquality,'getDataId',{
 //						id:dataId
