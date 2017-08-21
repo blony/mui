@@ -105,7 +105,7 @@
 			</div>
 			<div class="title-top">	
 					<h4>河道水质信息</h4>
-					<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined">
+					<button id="riversearch" type="button" class="mui-btn mui-btn-primary mui-btn-outlined">
 				查看所有河道
 				</button>
 				</div>
@@ -304,6 +304,22 @@
 					})
 //					获取详情webview
 					waterq = plus.webview.getWebviewById('waterquality.html')
+//					通过自定义事件传值
+//					mui.fire(waterquality,'getDataId',{
+//						id:dataId
+//					})
+				});
+				
+				//水质说明页跳转
+				var riversearch = document.getElementById('riversearch');
+				riversearch.addEventListener('tap',function(){
+//					打开详情页
+					mui.openWindow({
+						id:'riversearch.html',
+						url:'../homepage/riversearch.html'
+					})
+//					获取详情webview
+					waterq = plus.webview.getWebviewById('riversearch.html')
 //					通过自定义事件传值
 //					mui.fire(waterquality,'getDataId',{
 //						id:dataId

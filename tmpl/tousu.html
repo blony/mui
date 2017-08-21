@@ -37,7 +37,7 @@
 	</style>
 	<body>
 		<div class="mui-content">
-			<div class="mui-card">
+			<div id="card1" class="mui-card">
 				<div class="mui-card-header">
 					<h4>永定河</h4>
 					<h5 style="color: green;"><img src="../images/processed.png"/>已处理</h5>
@@ -56,7 +56,7 @@
 					<h5>所属区县<span>丰台区</span></h5>
 				</div>
 			</div>
-			<div class="mui-card">
+			<div id="card2" class="mui-card">
 				<div class="mui-card-header">
 					<h4>潮白河</h4>
 					<h5 style="color: #d81e06;"><img src="../images/untreated.png"/>未处理</h5>
@@ -71,11 +71,11 @@
 					</div>
 				</div>
 				<div class="mui-card-footer">
-					<h5>2017-08-13 09:45</h5>
+					<h5>2017-08-10 13:45</h5>
 					<h5>所属区县<span>东城区</span></h5>
 				</div>
 			</div>
-			<div class="mui-card">
+			<div id="card3" class="mui-card">
 				<div class="mui-card-header">
 					<h4>北运河</h4>
 					<h5 style="color: green;"><img src="../images/processed.png"/>已处理</h5>
@@ -83,14 +83,14 @@
 				<div class="mui-card-content">
 					<div class="mui-card-content-inner">
 						<img src="../images/river1.png"/>
-						<div >
+						<div>
 							<h4>河水绿色</h4>
 							河水泛绿现象特别严重。
 						</div>
 					</div>
 				</div>
 				<div class="mui-card-footer">
-					<h5>2017-08-13 09:45</h5>
+					<h5>2017-08-09 10:56</h5>
 					<h5>所属区县<span>顺义区</span></h5>
 				</div>
 			</div>
@@ -98,6 +98,53 @@
 	</body>
 	<script src="../js/mui.min.js"></script>
 	<script type="text/javascript">
-		mui.init()
+		mui.init();
+		
+		
+			var card1 =document.getElementById('card1');
+			card1.addEventListener('tap',function(){
+				console.log("111");
+				//打开详情页
+					mui.openWindow({
+						id:'ComplaintInfo.html',
+						url:'../tousupage/ComplaintInfo.html'
+					})
+//					获取详情webview
+					tologin = plus.webview.getWebviewById('ComplaintInfo.html')
+//					通过自定义事件传值
+//					mui.fire(waterquality,'getDataId',{
+//						id:dataId
+//					})
+		});
+			var card2 =document.getElementById('card2');
+				card2.addEventListener('tap',function(){
+				//打开详情页
+					mui.openWindow({
+						id:'ComplaintInfo2.html',
+						url:'../tousupage/ComplaintInfo2.html'
+					})
+//					获取详情webview
+					tologin = plus.webview.getWebviewById('ComplaintInfo2.html')
+//					通过自定义事件传值
+//					mui.fire(waterquality,'getDataId',{
+//						id:dataId
+//					})
+		});
+			var card3 =document.getElementById('card3');
+				card3.addEventListener('tap',function(){
+				//打开详情页
+					mui.openWindow({
+						id:'ComplaintInfo.html',
+						url:'../tousupage/ComplaintInfo.html'
+					})
+//					获取详情webview
+					tologin = plus.webview.getWebviewById('ComplaintInfo.html')
+//					通过自定义事件传值
+//					mui.fire(waterquality,'getDataId',{
+//						id:dataId
+//					})
+		});
+		
+		
 	</script>
 </html>

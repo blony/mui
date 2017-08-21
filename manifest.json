@@ -281,7 +281,8 @@
 				],
 				"refer": [
 					"homepage/waterquality.html",
-					"homepage/riversection.html"
+					"homepage/riversection.html",
+					"homepage/riversearch.html"
 				],
 				"priority": 0
 			},
@@ -390,7 +391,33 @@
 					"css/mui.min.css",
 					"images/processed.png",
 					"images/untreated.png",
-					"css/mui.css"
+					"css/mui.css",
+					"images/river2.png",
+					"images/river1.png"
+				],
+				"refer": [
+					"tousupage/ComplaintInfo.html",
+					"tousupage/ComplaintInfo2.html"
+				],
+				"priority": 0
+			},
+			"tousupage/ComplaintInfo.html": {
+				"resources": [
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"tousupage/ComplaintInfo2.html": {
+				"resources": [
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"homepage/riversearch.html": {
+				"resources": [
+					"css/mui.min.css"
 				],
 				"refer": [],
 				"priority": 0

@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<style type="text/css">
+	
+		/*头部样式*/
+			 header {
+			 	background-color: #007AFF !important;
+			 }
+			  header h1 {
+			 	color: #fff !important;
+			 }
+			  .mui-icon-left-nav {
+			 	color: #FFF;
+			 }
+			 
+			 /*编号样式*/
+			 .mui-content {
+			 	background-color: rgba(216,30,6,0.2);
+			 	margin: 10px 0;
+			 	padding-left: 1rem;
+			 	padding-bottom: 10px;
+			 }
+			 .mui-content h4 {
+			 	font-weight: 400;
+			 	color: #AAAAAA;
+			 }
+			 .mui-content h4 span {
+			 	color: #d81e06;
+			 }
+			 
+			 .mui-card-content {
+			 	background-color: #fff;
+			 	padding: 1rem 1rem ;
+			 	margin: 10px 0;
+			 }
+			 
+			 /*投诉情况样式*/
+			.tousu h4 {
+				color: #d81e06;
+			}
+			.tousu table  {
+			margin-bottom: 1rem;
+			
+			}
+			.tousu table th {
+				width: 25%;
+			}
+			.tousu table tr {
+				height: 2rem;
+			}
+			.tousu .tousu-img img {
+				width: 50px;
+				height: 50px;
+				margin-right: 5px;
+			}
+			.tousu-img {
+				height: 50px;
+			}
+			
+			/*处理结果样式*/
+			.tousu-result h4 {
+				color: #d81e06;
+			}
+			.tousu-result h5 {
+				margin-top: 10px;
+			}
+			
+	</style>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 id="title" class="mui-title">投诉处理单</h1>
+		</header>
+		<div class="mui-content">
+			<h4>编号 <span>TS-JD-ADGJ0098</span></h4>
+		</div>
+		<div class="mui-card-content tousu">
+			<h4>投诉情况</h4>
+			<p>2017-08-14 10:12</p>
+			<table>
+				<tr>
+					<th>投诉人姓名</th>
+					<td>***</td>
+				</tr>
+				<tr>
+					<th>手机号码</th>
+					<td>***********</td>
+				</tr>
+				<tr>
+					<th>投诉河道</th>
+					<td>新安江（新安江段）</td>
+				</tr>
+				<tr>
+					<th>投诉内容</th>
+					<td>江滨公园C044路灯对着的新安江边内水路黑了。感觉要想办法加大活水注入，否则有点死水潭的感觉。</td>
+				</tr>
+			</table>
+			<div class="tousu-img">
+				<img src="../images/river1.png"/ >
+				<img src="../images/river2.png"/ >
+				<img src="../images/river3.png"/ >
+			</div>
+		</div>
+		<div class="mui-card-content tousu-result">
+			<h4>处理情况</h4>
+			<h5>处理状态：<span>已评价（未追加处理）</span></h5>
+		</div>
+		
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+		
+			
+			
+//			var title = document.querySelector('#title');
+//			var dataBox = document.querySelector('#dataBox');
+////			监听自定义事件getDataId
+//			window.addEventListener('getDataId',function(e){
+//				dataBox.innerHTML = '';//清空容器内容
+//				var dataId = e.detail.id;
+////				打印列表页传过来的值
+//				//console.log(dataId);
+////				通过id向服务器发起请求
+////				mui.post('data/detail.json',{id:dataId},function(data){},'json')
+////				模拟请求数据
+//				mui.post('../data/data'+dataId+'.json',{},function(data){
+////					将json对象转换成字符串类型的json对象
+//					//console.log(JSON.stringify(data))//json转字符串类型
+////					数据填充到页面
+//					title.innerHTML = data.title;
+//					for(var i = 0;i<3;i++){
+//						var p = document.createElement('p');
+//						p.innerHTML = data.info;
+//						var p2 = document.createElement('p');
+//						p2.innerHTML = '<img src="../images/'+data.img+'" alt="" />'
+//						dataBox.appendChild(p)
+//						dataBox.appendChild(p2)
+//					}
+//				},'json')
+//			})
+			
+		</script>
+	</body>
+
+</html>
