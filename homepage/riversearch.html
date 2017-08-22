@@ -25,6 +25,11 @@
 			 input[type=search], select, textarea {
 			 	margin-bottom: 0;
 			 }
+			 
+			 .mui-search.mui-active:before {
+			 	top:25px;
+			 	}
+			/*行政区域样式*/
 			  .mui-icon-left-nav {
 			 	color: #FFF;
 			 }
@@ -39,6 +44,12 @@
 				width: 25%;
 			}
 			
+			/*列表样式*/
+			.mui-navigate-right:after, .mui-push-right:after {
+			    right: 0px;
+			    content: '';
+			}
+						
 		</style>
 	</head>
 
@@ -85,13 +96,130 @@
 					</tr>
 				</table>
 			</div>
+				<!--下拉刷新容器-->
+		<div id="pullrefresh" class="mui-content">
+			<!--数据列表-->
+			<ul class="mui-table-view mui-table-view-chevron">
+				<li class="mui-table-view-cell mui-media">
+					<a class="mui-navigate-right">
+						<img class="mui-media-object mui-pull-left" src="../images/river6.jpg">
+						<div class="mui-media-body">
+							双龙港
+							<p class='mui-ellipsis'>区级</p>
+						</div>
+						<span class="mui-badge ">Ⅱ</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a class='mui-navigate-right' href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../images/river9.jpg">
+						<div class="mui-media-body">
+							八一浦
+							<p class='mui-ellipsis'>区级</p>
+						</div>
+						<span class="mui-badge ">Ⅰ</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a class="mui-navigate-right">
+						<img class="mui-media-object mui-pull-left" src="../images/river11.jpg">
+						<div class="mui-media-body">
+							九号浦
+							<p class='mui-ellipsis'>区级</p>
+						</div>
+						<span class="mui-badge ">Ⅲ</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a class="mui-navigate-right">
+						<img class="mui-media-object mui-pull-left" src="../images/river1.jpg">
+						<div class="mui-media-body">
+							永定河
+							<p class='mui-ellipsis'>区级</p>
+						</div>
+						<span class="mui-badge ">Ⅰ</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a class="mui-navigate-right">
+						<img class="mui-media-object mui-pull-left" src="../images/river6.jpg">
+						<div class="mui-media-body">
+							潮白河
+							<p class='mui-ellipsis'>区级</p>
+						</div>
+						<span class="mui-badge ">劣Ⅴ</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a class="mui-navigate-right">
+						<img class="mui-media-object mui-pull-left" src="../images/river2.jpg">
+						<div class="mui-media-body">
+							北运河
+							<p class='mui-ellipsis'>区级</p>
+						</div>
+						<span class="mui-badge ">Ⅴ</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a class="mui-navigate-right">
+						<img class="mui-media-object mui-pull-left" src="../images/river4.jpg">
+						<div class="mui-media-body">
+							拒马河
+							<p class='mui-ellipsis'>区级</p>
+						</div>
+						<span class="mui-badge ">Ⅳ</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a class="mui-navigate-right">
+						<img class="mui-media-object mui-pull-left" src="../images/river8.jpg">
+						<div class="mui-media-body">
+							天堂河
+							<p class='mui-ellipsis'>区级</p>
+						</div>
+						<span class="mui-badge ">Ⅰ</span>
+					</a>
+				</li>
+			</ul>
+		</div>
 		</div>
 		<script src="../js/mui.min.js"></script>
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 		<script>
 			mui.init({
-				swipeBack: true //启用右滑关闭功能
+				swipeBack: true, //启用右滑关闭功能
+				pullRefresh: {
+					container: '#pullrefresh',
+					up: {
+						auto:true,
+						contentrefresh: '正在加载...', 
+						callback: pullupRefresh
+					}
+				}
 			});
 			
+			//列表水质等级颜色区分
+			$(document).ready(function(){
+			$('.mui-navigate-right .mui-badge').each(function(){
+				var index =$(this);
+				index.css('color','#FFF')
+				if(index.text() == 'Ⅰ'){
+					index.css('background-color','skyblue');
+				}else if(index.text() == 'Ⅱ') {
+					index.css('background-color','deepskyblue');
+				}else if(index.text() == 'Ⅲ') {
+					index.css('background-color','yellowgreen');
+				}else if(index.text() == 'Ⅳ') {
+					index.css('background-color','gold');
+				}else if(index.text() == 'Ⅴ') {
+					index.css('background-color','orange');
+				}else if(index.text() == '劣Ⅴ') {
+					index.css('background-color','orangered');
+				}
+				
+			});
+		});
+			//搜索功能实现
 			var nativeWebview, imm, InputMethodManager;
 			var initNativeObjects = function() {
 				if (mui.os.android) {
@@ -111,7 +239,7 @@
 						"setKeyboardDisplayRequiresUserAction": false
 					});
 				}
-				setTimeout(function() {
+				setTimeout(function() { 
 					var inputElem = document.querySelector('input');
 					inputElem.focus();
 					inputElem.parentNode.classList.add('mui-active'); //第一个是search，加上激活样式
@@ -121,6 +249,23 @@
 				initNativeObjects();
 				showSoftInput();
 			});
+
+
+			var count = 0;
+			function pullupRefresh() {
+				setTimeout(function() {
+					mui('#pullrefresh').pullRefresh().endPullup((++count > 2)); //参数为true代表没有更多数据了。
+//					var table = document.body.querySelector('.mui-table-view');
+//					var cells = document.body.querySelectorAll('.mui-table-view-cell');
+//					var newCount = cells.length>0?5:10;//首次加载10条，满屏
+//					for (var i = cells.length, len = i + newCount; i < len; i++) {
+//						var li = document.createElement('li');
+//						li.className = 'mui-table-view-cell';
+//						li.innerHTML = '<a class="mui-navigate-right">Item ' + (i + 1) + '</a>';
+//						table.appendChild(li);
+//					}
+				}, 1500);
+			}
 
 		</script>
 	</body>

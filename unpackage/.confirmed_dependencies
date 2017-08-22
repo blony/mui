@@ -23,7 +23,8 @@
 			"tmpl/news.html",
 			"tmpl/user.html",
 			"tmpl/home.html",
-			"tmpl/tousu.html"
+			"tmpl/tousu.html",
+			"tmpl/riverinfo.html"
 		]
 	},
 	"tab-webview-subpage-about.html": {
@@ -200,7 +201,22 @@
 	},
 	"homepage/riversearch.html": {
 		"resources": [
-			"css/mui.min.css"
+			"css/mui.min.css",
+			"images/river6.jpg",
+			"images/river9.jpg",
+			"images/river11.jpg",
+			"images/river1.jpg",
+			"images/river2.jpg",
+			"images/river8.jpg"
+		]
+	},
+	"tmpl/riverinfo.html": {
+		"resources": [
+			"css/mui.min.css",
+			"images/river7.jpg",
+			"images/river9.jpg",
+			"images/river2.jpg",
+			"images/river6.jpg"
 		]
 	}
 }
