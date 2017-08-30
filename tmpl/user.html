@@ -85,12 +85,12 @@
 		mui.init({
 			swipeBack:true //启用右滑关闭功能
 		});
-		document.getElementById("about").addEventListener('tap',function () {
-			//获得主页面的webview
-			var main = plus.webview.currentWebview().parent();
-			//触发主页面的gohome事件
-			mui.fire(main,'gohome');
-		});
+//		document.getElementById("about").addEventListener('tap',function () {
+//			//获得主页面的webview
+//			var main = plus.webview.currentWebview().parent();
+//			//触发主页面的gohome事件
+//			mui.fire(main,'gohome');
+//		});
 		(function(){
 			//登录页跳转
 				var tologin = document.getElementById('tologin');
@@ -118,6 +118,22 @@
 					})
 //					获取详情webview
 					tologin = plus.webview.getWebviewById('mycollection.html')
+//					通过自定义事件传值
+//					mui.fire(waterquality,'getDataId',{
+//						id:dataId
+//					})
+				});
+				
+			//关于系统跳转
+				var about = document.getElementById('about');
+				about.addEventListener('tap',function(){
+//					打开详情页
+					mui.openWindow({
+						id:'about.html',
+						url:'../userpage/about.html'
+					});
+//					获取详情webview
+					tologin = plus.webview.getWebviewById('about.html')
 //					通过自定义事件传值
 //					mui.fire(waterquality,'getDataId',{
 //						id:dataId

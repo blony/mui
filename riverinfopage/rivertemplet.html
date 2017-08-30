@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../css/mui.min.css">
+
+		<style>
+			header {
+				background-color: #007AFF !important;
+			}
+			
+			header h1 {
+				color: #fff !important;
+			}
+			
+			.mui-icon-left-nav {
+				color: #FFF;
+			}
+			
+			.mui-card .mui-control-content {
+				padding: 10px;
+			}
+			
+			.mui-control-content {
+				height: 150px;
+			}
+			
+			.mui-segmented-control {
+				font-size: 17px;
+			}
+			
+			.mui-card-header {
+				height: 50vw;
+				background-size: 100% 100%;
+			}
+			
+			.mui-card-header.mui-card-media {
+				padding: 0;
+			}
+			
+			.card-title {
+				width: 100%;
+				height: 10vw;
+				background-color: rgba(0, 0, 0, 0.3);
+				position: absolute;
+				line-height: 10vw;
+				padding: 0 15px;
+				bottom: 0;
+			}
+			
+			.card-title span {
+				position: absolute;
+				right: 10%;
+				top: 30%;
+			}
+			
+			.card-tools {
+				display: inline-block;
+				position: absolute;
+				right: 15px;
+				top: 10px;
+			}
+			
+			.card-tools button {
+				width: 60px;
+				height: 25px;
+				text-align: center;
+				line-height: 25px;
+				padding: 0;
+				color: #fff;
+			}
+			
+			.card-tools :first-child {
+				background-color: red;
+			}
+			
+			.card-tools :first-child img {
+				background-color: red;
+			}
+			
+			.card-tools :last-child {
+				background-color: darkgreen;
+			}
+			
+			.card-tools button img {
+				width: 14px;
+				height: 14px;
+			}
+			
+			.mui-card-content-inner table {
+				width: 100%;
+			}
+			
+			.mui-card-footer {
+				min-height: 30px;
+				padding: 5px 20px;
+			}
+			
+			.mui-card-footer a img {
+				width: 20px;
+				height: 20px;
+			}
+			/*详情表格*/
+			
+			.mui-card-content-inner table tr {
+				height: 30px;
+			}
+			
+			.mui-card-content-inner table tr :first-child {
+				width: 25%;
+			}
+			/*地图样式*/
+			
+			#map {
+				width: 100%;
+				height: 300px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 id="title" class="mui-title">详情页</h1>
+		</header>
+		<div class="mui-content">
+			<div style="padding: 10px 10px;">
+				<div id="segmentedControl" class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-primary">
+					<a class="mui-control-item mui-active" id="btn1" href="#item1">基础信息</a>
+					<a class="mui-control-item" id="btn2" href="#item2">巡查记录</a>
+					<a class="mui-control-item" id="btn3" href="#item3">投诉信息</a>
+				</div>
+			</div>
+			<div>
+				<div id="item1" class="mui-control-content mui-active">
+					<div class="mui-card">
+						<div class="mui-card-header mui-card-media" style="background-image:url(../images/river7.jpg)">
+							<div class="card-tools">
+								<button><img src="../images/complaint.png"/>投诉</button>
+								<button><img src="../images/proposal.png"/>建议</button>
+							</div>
+							<div class="card-title">
+								潮白河
+								<span class="mui-badge mui-badge-primary">Ⅰ</span>
+							</div>
+						</div>
+						<div class="mui-card-content">
+							<div class="mui-card-content-inner">
+								<table>
+									<tr>
+										<th>河道编号</th>
+										<td>HDXH0001</td>
+										<th>所属区县</th>
+										<td>东城区</td>
+									</tr>
+									<tr>
+										<th>河道等级</th>
+										<td>重要区级</td>
+										<th>河道长度</th>
+										<td>24.300公里</td>
+									</tr>
+									<tr>
+										<th>河道起点</th>
+										<td>延庆区</td>
+										<th>河道终点</th>
+										<td>密云区</td>
+									</tr>
+									<tr>
+										<th>河长职责</th>
+										<td colspan="3">各级河长负责牵头组织开展包干河道水质和污染源现状调查，制定水资源环境治理实施方案，推动重点工程项目落实，协调解决重点难点问题，做好督促检查工作，确保完成水环境治理任务。</td>
+									</tr>
+									<tr>
+										<th>整治目标</th>
+										<td colspan="3">水清，流畅，岸美，景美，宜居</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div class="mui-card-footer">
+							河长联系方式
+						</div>
+					</div>
+
+				</div>
+				<div id="item2" class="mui-control-content">
+					<div id="map"></div>
+					<div class="mui-scroll-wrapper scrolllist" style="height: 200px;position: relative;">
+						<div class="mui-scroll">
+							<ul class="mui-table-view">
+								<li class="mui-table-view-cell">
+									1
+								</li>
+								<li class="mui-table-view-cell">
+									2
+								</li>
+								<li class="mui-table-view-cell">
+									3
+								</li>
+								<li class="mui-table-view-cell">
+									4
+								</li>
+								<li class="mui-table-view-cell">
+									5
+								</li>
+								<li class="mui-table-view-cell">
+									6
+								</li>
+								<li class="mui-table-view-cell">
+									7
+								</li>
+								<li class="mui-table-view-cell">
+									8
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="item3" class="mui-control-content">
+					<div class="mui-scroll-wrapper scrolllist" id="item3box" style="height: 100vh;">
+						<div class="mui-scroll">
+							<ul class="mui-table-view">
+								<li class="mui-table-view-cell">
+									1
+								</li>
+								<li class="mui-table-view-cell">
+									2
+								</li>
+								<li class="mui-table-view-cell">
+									3
+								</li>
+								<li class="mui-table-view-cell">
+									4
+								</li>
+								<li class="mui-table-view-cell">
+									5
+								</li>
+								<li class="mui-table-view-cell">
+									6
+								</li>
+								<li class="mui-table-view-cell">
+									7
+								</li>
+								<li class="mui-table-view-cell">
+									8
+								</li>
+								<li class="mui-table-view-cell">
+									9
+								</li>
+								<li class="mui-table-view-cell">
+									10
+								</li>
+								<li class="mui-table-view-cell">
+									11
+								</li>
+								<li class="mui-table-view-cell">
+									12
+								</li>
+								<li class="mui-table-view-cell">
+									13
+								</li>
+								<li class="mui-table-view-cell">
+									14
+								</li>
+								<li class="mui-table-view-cell">
+									15
+								</li>
+								<li class="mui-table-view-cell">
+									16
+								</li>
+								<li class="mui-table-view-cell">
+									17
+								</li>
+								<li class="mui-table-view-cell">
+									18
+								</li>
+								<li class="mui-table-view-cell">
+									19
+								</li>
+								<li class="mui-table-view-cell">
+									20
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<script>
+			mui.init({
+				swipeBack: true //启用右滑关闭功能
+			});
+
+			(function($) {
+				$('.scrolllist').scroll({
+					indicators: true //是否显示滚动条
+				});
+			})(mui);
+
+			$('#btn3').on('tap', function() {
+				if($('#item3box').height() == $(window).height()) {
+					$('#item3box').height($('#item3box').height() - 106);
+				};
+			});
+		</script>
+
+		<!--地图-->
+		<script>
+			//百度地图API功能
+			function loadJScript() {
+				var script = document.createElement("script");
+				script.type = "text/javascript";
+				script.src = "http://api.map.baidu.com/api?v=2.0&ak=GjX9cil3yryAuI43P9OcWPF0ouPny2ur&callback=init";
+				document.body.appendChild(script);
+			}
+			$('#btn2').on('tap', function() {
+				loadJScript();
+			}); //异步加载地图
+			//创建和初始化地图函数：  
+			function init() {
+				createMap(); //创建地图  
+				setMapEvent(); //设置地图事件  
+				addMapControl(); //向地图添加控件  
+				addPolyline(); //向地图中添加线  
+			}
+
+			//创建地图函数：  
+			function createMap() {
+				var map = new BMap.Map("map"); //在百度地图容器中创建一个地图  
+				var ctnpoint = new BMap.Point(116.392585, 39.865891); //定义一个中心点坐标  
+				map.centerAndZoom(ctnpoint, 13); //设定地图的中心点和坐标并将地图显示在地图容器中  
+				window.map = map; //将map变量存储在全局  
+			}
+
+			//地图事件设置函数：  
+			function setMapEvent() {
+				map.enableDragging(); //启用地图拖拽事件，默认启用(可不写)  
+				map.enableScrollWheelZoom(); //启用地图滚轮放大缩小  
+			}
+
+			//地图控件添加函数：  
+			function addMapControl() {
+				//向地图中添加缩放控件  
+				// var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});  
+				// map.addControl(ctrl_nav);  
+				//向地图中添加比例尺控件  
+				var ctrl_sca = new BMap.ScaleControl({
+					anchor: BMAP_ANCHOR_BOTTOM_LEFT
+				});
+				map.addControl(ctrl_sca);
+			}
+
+			//标注线数组  
+			var plPoints = [{
+				weight: 3,
+				color: "red",
+				opacity: 1,
+				points: [
+					"116.371528,39.868306",
+					"116.372894,39.868389",
+					"116.376739,39.868594",
+					"116.380628,39.868812",
+					"116.381302,39.868909",
+					"116.381922,39.868805",
+					"116.382641,39.868501",
+					"116.384177,39.867213",
+					"116.385488,39.866666",
+					"116.386979,39.866216",
+					"116.391067,39.866230",
+					"116.391695,39.866189",
+					"116.392585,39.865891",
+					"116.393762,39.865192",
+					"116.394660,39.864513",
+					"116.395361,39.863475",
+					"116.396205,39.861910",
+					"116.396519,39.860464",
+					"116.396474,39.859390",
+					"116.396825,39.858089",
+					"116.398127,39.856746",
+					"116.399205,39.855859",
+					"116.402691,39.853907",
+					"116.405170,39.852571",
+					"116.405970,39.852398",
+					"116.407712,39.852342",
+					"116.408413,39.852121"
+				]
+			}];
+			//向地图中添加线函数  
+			function addPolyline() {
+				for(var i = 0; i < plPoints.length; i++) {
+					var json = plPoints[i];
+					var points = [];
+					for(var j = 0; j < json.points.length; j++) {
+						var p1 = json.points[j].split(",")[0];
+						var p2 = json.points[j].split(",")[1];
+						points.push(new BMap.Point(p1, p2));
+					}
+					var line = new BMap.Polyline(points, {
+						strokeWeight: json.weight,
+						strokeColor: json.color,
+						strokeOpacity: json.opacity
+					});
+					map.addOverlay(line);
+
+				}
+			}
+		</script>
+	</body>
+
+</html>

@@ -70,7 +70,7 @@
 			</div>
 			<div class="mui-card-footer">
 				<a class="mui-card-link"><img src="../images/heart.png"/>点击收藏</a>
-				<a class="mui-card-link">查看更多信息</a>
+				<a id="more" class="mui-card-link">查看更多信息</a>
 			</div>
 		</div>
 		<div class="mui-card">
@@ -168,6 +168,22 @@
 	<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 		mui.init()
+		(function($){
+			var moreinfo =document.getElementById('more');
+			moreinfo.addEventListener('tap',function(){
+//				打开详情页
+					mui.openWindow({
+						id:'rivertemplet.html',
+						url:'../riverinfopage/rivertemplet.html'
+					})
+//					获取详情webview
+					moreinfo = plus.webview.getWebviewById('rivertemplet.html');
+//					通过自定义事件传值
+//					mui.fire(waterquality,'getDataId',{
+//						id:dataId
+//					})
+			})
+		})(mui);
 		$(document).ready(function(){
 			$('.card-title .mui-badge').each(function(){
 				var index =$(this);

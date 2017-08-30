@@ -319,7 +319,8 @@
 				"refer": [
 					"userpage/login.html",
 					"login/login.html",
-					"userpage/mycollection.html"
+					"userpage/mycollection.html",
+					"userpage/about.html"
 				],
 				"priority": 0
 			},
@@ -439,6 +440,37 @@
 					"images/river4.jpg",
 					"images/heart.png",
 					"images/redheart.png"
+				],
+				"refer": [
+					"riverinfopage/rivertemplet.html"
+				],
+				"priority": 0
+			},
+			"riverinfopage/rivertemplet.html": {
+				"resources": [
+					"images/complaint.png",
+					"images/proposal.png",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"userpage/about.html": {
+				"resources": [
+					"css/feedback.css",
+					"images/riverlogo.png",
+					"js/feedback.js",
+					"js/mui.view.js",
+					"css/mui.min.css"
+				],
+				"refer": [
+					"tmpl/guide.html"
+				],
+				"priority": 0
+			},
+			"tmpl/guide.html": {
+				"resources": [
+					"css/mui.min.css"
 				],
 				"refer": [],
 				"priority": 0
