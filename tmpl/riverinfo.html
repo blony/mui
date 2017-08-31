@@ -10,19 +10,22 @@
 	<style type="text/css">
 		.mui-card-header {
 			height: 40vw;
-			background-size:100% 100%;
+			background-size: 100% 100%;
 		}
+		
 		.mui-card-header.mui-card-media {
-		    padding: 0;
+			padding: 0;
 		}
+		
 		.card-title {
 			width: 100%;
 			height: 10vw;
-			background-color: rgba(0,0,0,0.3);
+			background-color: rgba(0, 0, 0, 0.3);
 			position: absolute;
 			line-height: 10vw;
 			padding: 0 15px;
 		}
+		
 		.card-title span {
 			position: absolute;
 			right: 10%;
@@ -37,11 +40,13 @@
 			min-height: 30px;
 			padding: 5px 20px;
 		}
+		
 		.mui-card-footer a img {
 			width: 20px;
 			height: 20px;
 		}
 	</style>
+
 	<body>
 		<div class="mui-card">
 			<div class="mui-card-header mui-card-media" style="background-image:url(../images/river7.jpg)">
@@ -52,7 +57,7 @@
 			</div>
 			<div class="mui-card-content">
 				<div class="mui-card-content-inner">
-					<table >
+					<table>
 						<tr>
 							<th>河道编号</th>
 							<td>HDXH0001</td>
@@ -69,8 +74,8 @@
 				</div>
 			</div>
 			<div class="mui-card-footer">
-				<a class="mui-card-link"><img src="../images/heart.png"/>点击收藏</a>
-				<a id="more" class="mui-card-link">查看更多信息</a>
+				<a class="mui-card-link"><img src="../images/heart.png" />点击收藏</a>
+				<a class="mui-card-link link-moreinfo">查看更多信息</a>
 			</div>
 		</div>
 		<div class="mui-card">
@@ -82,7 +87,7 @@
 			</div>
 			<div class="mui-card-content">
 				<div class="mui-card-content-inner">
-					<table >
+					<table>
 						<tr>
 							<th>河道编号</th>
 							<td>HDXH0002</td>
@@ -99,8 +104,8 @@
 				</div>
 			</div>
 			<div class="mui-card-footer">
-				<a class="mui-card-link"><img src="../images/heart.png"/>点击收藏</a>
-				<a class="mui-card-link">查看更多信息</a>
+				<a class="mui-card-link"><img src="../images/heart.png" />点击收藏</a>
+				<a class="mui-card-link link-moreinfo">查看更多信息</a>
 			</div>
 		</div>
 		<div class="mui-card">
@@ -112,7 +117,7 @@
 			</div>
 			<div class="mui-card-content">
 				<div class="mui-card-content-inner">
-					<table >
+					<table>
 						<tr>
 							<th>河道编号</th>
 							<td>HDXH0003</td>
@@ -129,8 +134,8 @@
 				</div>
 			</div>
 			<div class="mui-card-footer">
-				<a class="mui-card-link"><img src="../images/heart.png"/>点击收藏</a>
-				<a class="mui-card-link">查看更多信息</a>
+				<a class="mui-card-link"><img src="../images/heart.png" />点击收藏</a>
+				<a class="mui-card-link link-moreinfo">查看更多信息</a>
 			</div>
 		</div>
 		<div class="mui-card">
@@ -142,7 +147,7 @@
 			</div>
 			<div class="mui-card-content">
 				<div class="mui-card-content-inner">
-					<table >
+					<table>
 						<tr>
 							<th>河道编号</th>
 							<td>HDXH0004</td>
@@ -159,8 +164,8 @@
 				</div>
 			</div>
 			<div class="mui-card-footer">
-				<a class="mui-card-link"><img src="../images/heart.png"/>点击收藏</a>
-				<a class="mui-card-link">查看更多信息</a>
+				<a class="mui-card-link"><img src="../images/heart.png" />点击收藏</a>
+				<a class="mui-card-link link-moreinfo">查看更多信息</a>
 			</div>
 		</div>
 	</body>
@@ -168,53 +173,50 @@
 	<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 		mui.init()
-		(function($){
-			var moreinfo =document.getElementById('more');
-			moreinfo.addEventListener('tap',function(){
-//				打开详情页
-					mui.openWindow({
-						id:'rivertemplet.html',
-						url:'../riverinfopage/rivertemplet.html'
-					})
-//					获取详情webview
-					moreinfo = plus.webview.getWebviewById('rivertemplet.html');
-//					通过自定义事件传值
-//					mui.fire(waterquality,'getDataId',{
-//						id:dataId
-//					})
-			})
-		})(mui);
-		$(document).ready(function(){
-			$('.card-title .mui-badge').each(function(){
-				var index =$(this);
-				if(index.text() == 'Ⅰ'){
-					index.css('background-color','skyblue');
-				}else if(index.text() == 'Ⅱ') {
-					index.css('background-color','deepskyblue');
-				}else if(index.text() == 'Ⅲ') {
-					index.css('background-color','yellowgreen');
-				}else if(index.text() == 'Ⅳ') {
-					index.css('background-color','gold');
-				}else if(index.text() == 'Ⅴ') {
-					index.css('background-color','orange');
-				}else if(index.text() == '劣Ⅴ') {
-					index.css('background-color','orangered');
+		$(document).ready(function() {
+			$('.link-moreinfo').on('tap', function() {
+				//				打开详情页
+				mui.openWindow({
+					id: 'rivertemplet.html',
+					url: '../riverinfopage/rivertemplet.html'
+				});
+				//					获取详情webview
+				moreinfo = plus.webview.getWebviewById('rivertemplet.html');
+				//					通过自定义事件传值
+				//					mui.fire(waterquality,'getDataId',{
+				//						id:dataId
+				//					})
+			});
+			$('.card-title .mui-badge').each(function() {
+				var index = $(this);
+				if(index.text() == 'Ⅰ') {
+					index.css('background-color', 'skyblue');
+				} else if(index.text() == 'Ⅱ') {
+					index.css('background-color', 'deepskyblue');
+				} else if(index.text() == 'Ⅲ') {
+					index.css('background-color', 'yellowgreen');
+				} else if(index.text() == 'Ⅳ') {
+					index.css('background-color', 'gold');
+				} else if(index.text() == 'Ⅴ') {
+					index.css('background-color', 'orange');
+				} else if(index.text() == '劣Ⅴ') {
+					index.css('background-color', 'orangered');
 				}
 			});
-			$('.mui-card-footer').each(function(){
+			$('.mui-card-footer').each(function() {
 				var index = $($(this).children('a').get(0));
-				index.click(function(){
-					if(index.text() == '点击收藏'){
+				index.click(function() {
+					if(index.text() == '点击收藏') {
 						index.text('取消收藏');
-						index.css('color','#d81e06');
+						index.css('color', '#d81e06');
 						index.prepend('<img src="../images/redheart.png"/>');
-					}else{
+					} else {
 						index.text('点击收藏');
-						index.css('color','#007AFF');
+						index.css('color', '#007AFF');
 						index.prepend('<img src="../images/heart.png"/>');
 					}
 				})
-				
+
 			});
 		});
 	</script>

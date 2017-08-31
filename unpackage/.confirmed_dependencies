@@ -9,7 +9,8 @@
 			"js/iconfont.js",
 			"css/iconfont.css",
 			"fonts/iconfont.ttf",
-			"tmpl/home.html"
+			"tmpl/home.html",
+			"js/mui.js"
 		],
 		"refer": [
 			"tab-webview-subpage-about.html",
@@ -71,7 +72,8 @@
 			"images/river1.png",
 			"data/newsdata/news.json",
 			"images/news.png",
-			"images/user.png"
+			"images/user.png",
+			"js/mui.min.js"
 		],
 		"refer": [
 			"tmpl/detail.html",
@@ -84,7 +86,8 @@
 		"resources": [
 			"css/mui.min.css",
 			"js/jquery.min.js",
-			"images/homeTOP.png"
+			"images/homeTOP.png",
+			"js/mui.min.js"
 		],
 		"refer": [
 			"homepage/waterquality.html",
@@ -103,7 +106,8 @@
 			"css/mui.min.css",
 			"data/data04.json",
 			"data/data02.json",
-			"data/data03.json"
+			"data/data03.json",
+			"js/mui.js"
 		]
 	},
 	"tmpl/user.html": {
@@ -183,7 +187,9 @@
 			"images/untreated.png",
 			"css/mui.css",
 			"images/river2.png",
-			"images/river1.png"
+			"images/river1.png",
+			"js/mui.js",
+			"js/mui.min.js"
 		],
 		"refer": [
 			"tousupage/ComplaintInfo.html",
@@ -231,6 +237,9 @@
 			"images/complaint.png",
 			"images/proposal.png",
 			"css/mui.min.css"
+		],
+		"refer": [
+			"tousupage/ComplaintInfo.html"
 		]
 	},
 	"userpage/about.html": {

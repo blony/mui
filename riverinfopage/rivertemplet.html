@@ -34,7 +34,7 @@
 				font-size: 17px;
 			}
 			
-			.mui-card-header {
+			#item1 .mui-card-header {
 				height: 50vw;
 				background-size: 100% 100%;
 			}
@@ -118,8 +118,44 @@
 			
 			#map {
 				width: 100%;
-				height: 300px;
+				height: 200px;
 			}
+			
+			/*投诉信息列表样式*/
+		#item3 .mui-card-header h5 img {
+			width: 16px;height: 16px;
+		}
+		#item3 .mui-card-header,
+		#item3 .mui-card-footer {
+			padding: 0 15px;
+		}
+		#item3 .mui-card-content-inner{
+			overflow: hidden;
+			padding: 10px 15px;
+		}
+		#item3 .mui-card-content-inner img {
+			display: inline-block;
+			width: 3rem;
+			height: 3rem;
+			position: absolute;
+			top: 20%;
+		}
+		#item3 .mui-card-content-inner div {
+			width: 80%;
+			float: right;
+		}
+		#item3 .mui-card-footer h5 span {
+			color: green;
+		}
+		#item3 ul li {
+			padding: 5px 0;
+		}
+		#item3 ul li .mui-card {
+			margin: 0;
+		}
+		#item3 .mui-card {
+			background: none;
+		}
 		</style>
 	</head>
 
@@ -189,32 +225,52 @@
 				</div>
 				<div id="item2" class="mui-control-content">
 					<div id="map"></div>
-					<div class="mui-scroll-wrapper scrolllist" style="height: 200px;position: relative;">
+					<div class="mui-scroll-wrapper scrolllist" id="item2box" style="height: 100vh;position: relative;">
 						<div class="mui-scroll">
 							<ul class="mui-table-view">
 								<li class="mui-table-view-cell">
-									1
+									2017-08-26 潮白河
+									<b style="float: right;">陈鹏</b>
 								</li>
 								<li class="mui-table-view-cell">
-									2
+									2017-08-24 潮白河
+									<b style="float: right;">陈鹏</b>
 								</li>
 								<li class="mui-table-view-cell">
-									3
+									2017-08-21 潮白河
+									<b style="float: right;">陈鹏</b>
 								</li>
 								<li class="mui-table-view-cell">
-									4
+									2017-08-18 潮白河
+									<b style="float: right;">陈鹏</b>
 								</li>
 								<li class="mui-table-view-cell">
-									5
+									2017-08-16 潮白河
+									<b style="float: right;">武邢</b>
 								</li>
 								<li class="mui-table-view-cell">
-									6
+									2017-08-12 潮白河
+									<b style="float: right;">武邢</b>
 								</li>
 								<li class="mui-table-view-cell">
-									7
+									2017-08-10 潮白河
+									<b style="float: right;">武邢</b>
 								</li>
 								<li class="mui-table-view-cell">
-									8
+									2017-08-09 潮白河
+									<b style="float: right;">武邢</b>
+								</li>
+								<li class="mui-table-view-cell">
+									2017-08-07 潮白河
+									<b style="float: right;">武邢</b>
+								</li>
+								<li class="mui-table-view-cell">
+									2017-08-06 潮白河
+									<b style="float: right;">武邢</b>
+								</li>
+								<li class="mui-table-view-cell">
+									2017-08-01 潮白河
+									<b style="float: right;">武邢</b>
 								</li>
 							</ul>
 						</div>
@@ -225,64 +281,404 @@
 						<div class="mui-scroll">
 							<ul class="mui-table-view">
 								<li class="mui-table-view-cell">
-									1
+									<div  class="mui-card">
+										<div class="mui-card-header">
+											<h4>永定河</h4>
+											<h5 style="color: green;"><img src="../images/processed.png"/>已处理</h5>
+										</div>
+										<div class="mui-card-content">
+											<div class="mui-card-content-inner">
+												<img src="../images/river1.png" />
+												<div>
+													<h4>河面垃圾特别多</h4> 永定河位于北京市西郊。
+												</div>
+											</div>
+										</div>
+										<div class="mui-card-footer">
+											<h5>2017-08-13 09:45</h5>
+											<h5>所属区县<span>丰台区</span></h5>
+										</div>
+									</div>
 								</li>
 								<li class="mui-table-view-cell">
-									2
+									<div  class="mui-card">
+										<div class="mui-card-header">
+											<h4>永定河</h4>
+											<h5 style="color: green;"><img src="../images/processed.png"/>已处理</h5>
+										</div>
+										<div class="mui-card-content">
+											<div class="mui-card-content-inner">
+												<img src="../images/river1.png" />
+												<div>
+													<h4>河面垃圾特别多</h4> 永定河位于北京市西郊。
+												</div>
+											</div>
+										</div>
+										<div class="mui-card-footer">
+											<h5>2017-08-13 09:45</h5>
+											<h5>所属区县<span>丰台区</span></h5>
+										</div>
+									</div>
 								</li>
 								<li class="mui-table-view-cell">
-									3
+									<div  class="mui-card">
+										<div class="mui-card-header">
+											<h4>永定河</h4>
+											<h5 style="color: green;"><img src="../images/processed.png"/>已处理</h5>
+										</div>
+										<div class="mui-card-content">
+											<div class="mui-card-content-inner">
+												<img src="../images/river1.png" />
+												<div>
+													<h4>河面垃圾特别多</h4> 永定河位于北京市西郊。
+												</div>
+											</div>
+										</div>
+										<div class="mui-card-footer">
+											<h5>2017-08-13 09:45</h5>
+											<h5>所属区县<span>丰台区</span></h5>
+										</div>
+									</div>
 								</li>
 								<li class="mui-table-view-cell">
-									4
+									<div  class="mui-card">
+										<div class="mui-card-header">
+											<h4>永定河</h4>
+											<h5 style="color: green;"><img src="../images/processed.png"/>已处理</h5>
+										</div>
+										<div class="mui-card-content">
+											<div class="mui-card-content-inner">
+												<img src="../images/river1.png" />
+												<div>
+													<h4>河面垃圾特别多</h4> 永定河位于北京市西郊。
+												</div>
+											</div>
+										</div>
+										<div class="mui-card-footer">
+											<h5>2017-08-13 09:45</h5>
+											<h5>所属区县<span>丰台区</span></h5>
+										</div>
+									</div>
 								</li>
 								<li class="mui-table-view-cell">
-									5
+									<div  class="mui-card">
+										<div class="mui-card-header">
+											<h4>永定河</h4>
+											<h5 style="color: green;"><img src="../images/processed.png"/>已处理</h5>
+										</div>
+										<div class="mui-card-content">
+											<div class="mui-card-content-inner">
+												<img src="../images/river1.png" />
+												<div>
+													<h4>河面垃圾特别多</h4> 永定河位于北京市西郊。
+												</div>
+											</div>
+										</div>
+										<div class="mui-card-footer">
+											<h5>2017-08-13 09:45</h5>
+											<h5>所属区县<span>丰台区</span></h5>
+										</div>
+									</div>
 								</li>
 								<li class="mui-table-view-cell">
-									6
+									<div  class="mui-card">
+										<div class="mui-card-header">
+											<h4>永定河</h4>
+											<h5 style="color: green;"><img src="../images/processed.png"/>已处理</h5>
+										</div>
+										<div class="mui-card-content">
+											<div class="mui-card-content-inner">
+												<img src="../images/river1.png" />
+												<div>
+													<h4>河面垃圾特别多</h4> 永定河位于北京市西郊。
+												</div>
+											</div>
+										</div>
+										<div class="mui-card-footer">
+											<h5>2017-08-13 09:45</h5>
+											<h5>所属区县<span>丰台区</span></h5>
+										</div>
+									</div>
 								</li>
 								<li class="mui-table-view-cell">
-									7
+									<div  class="mui-card">
+										<div class="mui-card-header">
+											<h4>永定河</h4>
+											<h5 style="color: green;"><img src="../images/processed.png"/>已处理</h5>
+										</div>
+										<div class="mui-card-content">
+											<div class="mui-card-content-inner">
+												<img src="../images/river1.png" />
+												<div>
+													<h4>河面垃圾特别多</h4> 永定河位于北京市西郊。
+												</div>
+											</div>
+										</div>
+										<div class="mui-card-footer">
+											<h5>2017-08-13 09:45</h5>
+											<h5>所属区县<span>丰台区</span></h5>
+										</div>
+									</div>
 								</li>
 								<li class="mui-table-view-cell">
-									8
+									<div  class="mui-card">
+										<div class="mui-card-header">
+											<h4>永定河</h4>
+											<h5 style="color: green;"><img src="../images/processed.png"/>已处理</h5>
+										</div>
+										<div class="mui-card-content">
+											<div class="mui-card-content-inner">
+												<img src="../images/river1.png" />
+												<div>
+													<h4>河面垃圾特别多</h4> 永定河位于北京市西郊。
+												</div>
+											</div>
+										</div>
+										<div class="mui-card-footer">
+											<h5>2017-08-13 09:45</h5>
+											<h5>所属区县<span>丰台区</span></h5>
+										</div>
+									</div>
 								</li>
 								<li class="mui-table-view-cell">
-									9
+									<div  class="mui-card">
+										<div class="mui-card-header">
+											<h4>永定河</h4>
+											<h5 style="color: green;"><img src="../images/processed.png"/>已处理</h5>
+										</div>
+										<div class="mui-card-content">
+											<div class="mui-card-content-inner">
+												<img src="../images/river1.png" />
+												<div>
+													<h4>河面垃圾特别多</h4> 永定河位于北京市西郊。
+												</div>
+											</div>
+										</div>
+										<div class="mui-card-footer">
+											<h5>2017-08-13 09:45</h5>
+											<h5>所属区县<span>丰台区</span></h5>
+										</div>
+									</div>
 								</li>
 								<li class="mui-table-view-cell">
-									10
+									<div  class="mui-card">
+										<div class="mui-card-header">
+											<h4>永定河</h4>
+											<h5 style="color: green;"><img src="../images/processed.png"/>已处理</h5>
+										</div>
+										<div class="mui-card-content">
+											<div class="mui-card-content-inner">
+												<img src="../images/river1.png" />
+												<div>
+													<h4>河面垃圾特别多</h4> 永定河位于北京市西郊。
+												</div>
+											</div>
+										</div>
+										<div class="mui-card-footer">
+											<h5>2017-08-13 09:45</h5>
+											<h5>所属区县<span>丰台区</span></h5>
+										</div>
+									</div>
 								</li>
 								<li class="mui-table-view-cell">
-									11
+									<div  class="mui-card">
+										<div class="mui-card-header">
+											<h4>永定河</h4>
+											<h5 style="color: green;"><img src="../images/processed.png"/>已处理</h5>
+										</div>
+										<div class="mui-card-content">
+											<div class="mui-card-content-inner">
+												<img src="../images/river1.png" />
+												<div>
+													<h4>河面垃圾特别多</h4> 永定河位于北京市西郊。
+												</div>
+											</div>
+										</div>
+										<div class="mui-card-footer">
+											<h5>2017-08-13 09:45</h5>
+											<h5>所属区县<span>丰台区</span></h5>
+										</div>
+									</div>
 								</li>
 								<li class="mui-table-view-cell">
-									12
+									<div  class="mui-card">
+										<div class="mui-card-header">
+											<h4>永定河</h4>
+											<h5 style="color: green;"><img src="../images/processed.png"/>已处理</h5>
+										</div>
+										<div class="mui-card-content">
+											<div class="mui-card-content-inner">
+												<img src="../images/river1.png" />
+												<div>
+													<h4>河面垃圾特别多</h4> 永定河位于北京市西郊。
+												</div>
+											</div>
+										</div>
+										<div class="mui-card-footer">
+											<h5>2017-08-13 09:45</h5>
+											<h5>所属区县<span>丰台区</span></h5>
+										</div>
+									</div>
 								</li>
 								<li class="mui-table-view-cell">
-									13
+									<div  class="mui-card">
+										<div class="mui-card-header">
+											<h4>永定河</h4>
+											<h5 style="color: green;"><img src="../images/processed.png"/>已处理</h5>
+										</div>
+										<div class="mui-card-content">
+											<div class="mui-card-content-inner">
+												<img src="../images/river1.png" />
+												<div>
+													<h4>河面垃圾特别多</h4> 永定河位于北京市西郊。
+												</div>
+											</div>
+										</div>
+										<div class="mui-card-footer">
+											<h5>2017-08-13 09:45</h5>
+											<h5>所属区县<span>丰台区</span></h5>
+										</div>
+									</div>
 								</li>
 								<li class="mui-table-view-cell">
-									14
+									<div  class="mui-card">
+										<div class="mui-card-header">
+											<h4>永定河</h4>
+											<h5 style="color: green;"><img src="../images/processed.png"/>已处理</h5>
+										</div>
+										<div class="mui-card-content">
+											<div class="mui-card-content-inner">
+												<img src="../images/river1.png" />
+												<div>
+													<h4>河面垃圾特别多</h4> 永定河位于北京市西郊。
+												</div>
+											</div>
+										</div>
+										<div class="mui-card-footer">
+											<h5>2017-08-13 09:45</h5>
+											<h5>所属区县<span>丰台区</span></h5>
+										</div>
+									</div>
 								</li>
 								<li class="mui-table-view-cell">
-									15
+									<div  class="mui-card">
+										<div class="mui-card-header">
+											<h4>永定河</h4>
+											<h5 style="color: green;"><img src="../images/processed.png"/>已处理</h5>
+										</div>
+										<div class="mui-card-content">
+											<div class="mui-card-content-inner">
+												<img src="../images/river1.png" />
+												<div>
+													<h4>河面垃圾特别多</h4> 永定河位于北京市西郊。
+												</div>
+											</div>
+										</div>
+										<div class="mui-card-footer">
+											<h5>2017-08-13 09:45</h5>
+											<h5>所属区县<span>丰台区</span></h5>
+										</div>
+									</div>
 								</li>
 								<li class="mui-table-view-cell">
-									16
+									<div  class="mui-card">
+										<div class="mui-card-header">
+											<h4>永定河</h4>
+											<h5 style="color: green;"><img src="../images/processed.png"/>已处理</h5>
+										</div>
+										<div class="mui-card-content">
+											<div class="mui-card-content-inner">
+												<img src="../images/river1.png" />
+												<div>
+													<h4>河面垃圾特别多</h4> 永定河位于北京市西郊。
+												</div>
+											</div>
+										</div>
+										<div class="mui-card-footer">
+											<h5>2017-08-13 09:45</h5>
+											<h5>所属区县<span>丰台区</span></h5>
+										</div>
+									</div>
 								</li>
 								<li class="mui-table-view-cell">
-									17
+									<div  class="mui-card">
+										<div class="mui-card-header">
+											<h4>永定河</h4>
+											<h5 style="color: green;"><img src="../images/processed.png"/>已处理</h5>
+										</div>
+										<div class="mui-card-content">
+											<div class="mui-card-content-inner">
+												<img src="../images/river1.png" />
+												<div>
+													<h4>河面垃圾特别多</h4> 永定河位于北京市西郊。
+												</div>
+											</div>
+										</div>
+										<div class="mui-card-footer">
+											<h5>2017-08-13 09:45</h5>
+											<h5>所属区县<span>丰台区</span></h5>
+										</div>
+									</div>
 								</li>
 								<li class="mui-table-view-cell">
-									18
+									<div  class="mui-card">
+										<div class="mui-card-header">
+											<h4>永定河</h4>
+											<h5 style="color: green;"><img src="../images/processed.png"/>已处理</h5>
+										</div>
+										<div class="mui-card-content">
+											<div class="mui-card-content-inner">
+												<img src="../images/river1.png" />
+												<div>
+													<h4>河面垃圾特别多</h4> 永定河位于北京市西郊。
+												</div>
+											</div>
+										</div>
+										<div class="mui-card-footer">
+											<h5>2017-08-13 09:45</h5>
+											<h5>所属区县<span>丰台区</span></h5>
+										</div>
+									</div>
 								</li>
 								<li class="mui-table-view-cell">
-									19
+									<div  class="mui-card">
+										<div class="mui-card-header">
+											<h4>永定河</h4>
+											<h5 style="color: green;"><img src="../images/processed.png"/>已处理</h5>
+										</div>
+										<div class="mui-card-content">
+											<div class="mui-card-content-inner">
+												<img src="../images/river1.png" />
+												<div>
+													<h4>河面垃圾特别多</h4> 永定河位于北京市西郊。
+												</div>
+											</div>
+										</div>
+										<div class="mui-card-footer">
+											<h5>2017-08-13 09:45</h5>
+											<h5>所属区县<span>丰台区</span></h5>
+										</div>
+									</div>
 								</li>
 								<li class="mui-table-view-cell">
-									20
+									<div  class="mui-card">
+										<div class="mui-card-header">
+											<h4>永定河</h4>
+											<h5 style="color: green;"><img src="../images/processed.png"/>已处理</h5>
+										</div>
+										<div class="mui-card-content">
+											<div class="mui-card-content-inner">
+												<img src="../images/river1.png" />
+												<div>
+													<h4>河面垃圾特别多</h4> 永定河位于北京市西郊。
+												</div>
+											</div>
+										</div>
+										<div class="mui-card-footer">
+											<h5>2017-08-13 09:45</h5>
+											<h5>所属区县<span>丰台区</span></h5>
+										</div>
+									</div>
 								</li>
 							</ul>
 						</div>
@@ -304,11 +700,30 @@
 				});
 			})(mui);
 
+			$('#btn2').on('tap', function() {
+				if($('#item2box').height() == $(window).height()) {
+					console.log("1123")
+					$('#item2box').height($('#item2box').height() - 306);
+				};
+			});
 			$('#btn3').on('tap', function() {
 				if($('#item3box').height() == $(window).height()) {
 					$('#item3box').height($('#item3box').height() - 106);
 				};
 			});
+			$('#item3 .mui-card').on('tap',function(){
+				//打开详情页
+					mui.openWindow({
+						id:'ComplaintInfo.html',
+						url:'../tousupage/ComplaintInfo.html'
+					})
+//					获取详情webview
+					tologin = plus.webview.getWebviewById('ComplaintInfo.html')
+//					通过自定义事件传值
+//					mui.fire(waterquality,'getDataId',{
+//						id:dataId
+//					})
+			})
 		</script>
 
 		<!--地图-->
@@ -355,6 +770,14 @@
 					anchor: BMAP_ANCHOR_BOTTOM_LEFT
 				});
 				map.addControl(ctrl_sca);
+				//向地图添加图层切换控件
+				var mapType1 = new BMap.MapTypeControl({
+					mapTypes: [
+						BMAP_NORMAL_MAP,
+						BMAP_SATELLITE_MAP
+					]
+				});
+				map.addControl(mapType1);
 			}
 
 			//标注线数组  
