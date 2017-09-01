@@ -77,6 +77,7 @@
 			
 			.card-tools :first-child {
 				background-color: red;
+				border-color: red;
 			}
 			
 			.card-tools :first-child img {
@@ -85,6 +86,7 @@
 			
 			.card-tools :last-child {
 				background-color: darkgreen;
+				border-color: darkgreen;
 			}
 			
 			.card-tools button img {
@@ -177,8 +179,8 @@
 					<div class="mui-card">
 						<div class="mui-card-header mui-card-media" style="background-image:url(../images/river7.jpg)">
 							<div class="card-tools">
-								<button><img src="../images/complaint.png"/>投诉</button>
-								<button><img src="../images/proposal.png"/>建议</button>
+								<button id="mycomplaint"><img src="../images/complaint.png"/>投诉</button>
+								<button id="mysuggestion"><img src="../images/proposal.png"/>建议</button>
 							</div>
 							<div class="card-title">
 								潮白河
@@ -700,9 +702,9 @@
 				});
 			})(mui);
 
+			//控制列表高度自适应各种移动端设备
 			$('#btn2').on('tap', function() {
 				if($('#item2box').height() == $(window).height()) {
-					console.log("1123")
 					$('#item2box').height($('#item2box').height() - 306);
 				};
 			});
@@ -711,6 +713,54 @@
 					$('#item3box').height($('#item3box').height() - 106);
 				};
 			});
+			var mycomplaint =document.getElementById('mycomplaint');
+			mycomplaint.addEventListener('tap',function(){
+				//打开投诉详情页
+					mui.openWindow({
+						id:'mycomplaint.html',
+						url:'../tousupage/mycomplaint.html'
+					})
+//					获取详情webview
+					tologin = plus.webview.getWebviewById('mycomplaint.html')
+//					通过自定义事件传值
+//					mui.fire(waterquality,'getDataId',{
+//						id:dataId
+//					})
+			});
+			var mysuggestion =document.getElementById('mysuggestion');
+			mysuggestion.addEventListener('tap',function(){
+				//打开建议详情页
+					mui.openWindow({
+						id:'mysuggestion.html',
+						url:'../tousupage/mysuggestion.html'
+					})
+//					获取详情webview
+					tologin = plus.webview.getWebviewById('mysuggestion.html')
+//					通过自定义事件传值
+//					mui.fire(waterquality,'getDataId',{
+//						id:dataId
+//					})
+			});
+			
+			var inslist = $('#item2 .mui-table-view-cell');
+			console.log(inslist);
+			for (var i = 0;i<inslist.length;i++) {
+				inslist[i].addEventListener('tap',function(){
+					//打开详情页
+					console.log("123")
+					mui.openWindow({
+						id:'inspectionresult.html',
+						url:'inspectionresult.html'
+					})
+//					获取详情webview
+					tologin = plus.webview.getWebviewById('inspectionresult.html')
+//					通过自定义事件传值
+//					mui.fire(waterquality,'getDataId',{
+//						id:dataId
+//					})
+					
+				});
+			}
 			$('#item3 .mui-card').on('tap',function(){
 				//打开详情页
 					mui.openWindow({
@@ -723,7 +773,7 @@
 //					mui.fire(waterquality,'getDataId',{
 //						id:dataId
 //					})
-			})
+		});
 		</script>
 
 		<!--地图-->

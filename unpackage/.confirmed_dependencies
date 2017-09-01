@@ -119,7 +119,8 @@
 			"images/userlogin.png",
 			"css/mui.min.css",
 			"images/like.png",
-			"images/about.png"
+			"images/about.png",
+			"js/mui.min.js"
 		],
 		"refer": [
 			"userpage/login.html",
@@ -239,7 +240,10 @@
 			"css/mui.min.css"
 		],
 		"refer": [
-			"tousupage/ComplaintInfo.html"
+			"tousupage/ComplaintInfo.html",
+			"tousupage/mycomplaint.html",
+			"tousupage/mysuggestion.html",
+			"riverinfopage/inspectionresult.html"
 		]
 	},
 	"userpage/about.html": {
@@ -257,6 +261,25 @@
 	"tmpl/guide.html": {
 		"resources": [
 			"css/mui.min.css"
+		]
+	},
+	"tousupage/mycomplaint.html": {
+		"resources": [
+			"css/feedback.css",
+			"css/mui.min.css",
+			"js/feedback.js",
+			"js/mui.view.js"
+		]
+	},
+	"tousupage/mysuggestion.html": {
+		"resources": [
+			"css/feedback.css",
+			"css/mui.min.css"
+		]
+	},
+	"riverinfopage/inspectionresult.html": {
+		"resources": [
+			"css/mui.css"
 		]
 	}
 }

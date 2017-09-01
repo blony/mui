@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+	</head>
+	<style type="text/css">
+		/*头部样式*/
+			 header {
+			 	background-color: #007AFF !important;
+			 }
+			  header h1 {
+			 	color: #fff !important;
+			 }
+			  .mui-icon-left-nav {
+			 	color: #FFF;
+			 }
+			 h5 {
+			 	margin-left: 10px;
+			 	margin-top: 15px;
+			 	color: #007AFF;
+			 	font-size: 16px;
+			 }
+			 textarea {
+			 	background-color: transparent;
+			 	margin-left: 2%; 
+			 	width: 96%;
+			 	margin-bottom: 0;
+			 }
+			 #inspector  {
+			 	width: 96%;
+			 	margin-left: 2%;
+			 	margin-top: 15px;
+			 	
+			 }
+			 #inspector tr {
+			 	height: 30px;
+			 }
+			 #inspector tr td {
+			 	width: 100px;
+			 }
+			 #inspector tr th {
+			 	text-align: left;
+			 }
+		
+			 #inscontent  {
+			 	width: 96%;
+			 	margin-left: 3%;
+			 	font-size: 14px;
+			 	
+			 }
+			 #inscontent tr {
+			 	height: 30px;
+			 	border-top: 1px dashed #CCCCCC;
+			 	border-left: 1px solid #CCCCCC;
+			 	border-right: 1px solid #CCCCCC;
+			 }
+			  #inscontent tr:last-child {
+			 	
+			 	border-bottom: 1px dashed #CCCCCC;
+			 }
+			 #inscontent tr td {
+			 	padding: 5px;
+			 }
+			 #inscontent tr th {
+			 	text-align: center;
+			 	width: 90px ;
+			 }
+	</style>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">巡查记录</h1>
+		</header>
+		<div class="mui-content" >
+			<table id="inspector" >
+				<tr>
+					<td>河道名称</td>
+					<th>潮白河</th>
+				</tr>
+				<tr>
+					<td>巡河人</td>
+					<th>武邢</th>
+				</tr>
+				<tr>
+					<td>巡河日期</td>
+					<th>2017-08-26</th>
+				</tr>
+			</table>
+			<h5>巡查情况</h5>
+			<table id="inscontent">
+				<tr>
+					<td>河道整治工作进展情况</td>
+					<th>计划推进</th>
+				</tr>
+				<tr>
+					<td>河道保洁、河岸绿化养护是否到位</td>
+					<th>是</th>
+				</tr>
+				<tr>
+					<td>是否存在各类污水直排口，工业企业、污水处理设备等是否有偷排、漏排及超标排放等环境违法行为</td>
+					<th>否</th>
+				</tr>
+				<tr>
+					<td>河岸是否存在涉水违法建筑物（构筑物）、河中是否存在阻水障碍物</td>
+					<th>否</th>
+				</tr>
+				<tr>
+					<td>是否存在河岸垃圾和泥浆渣土、工业固废等废弃物入河现象</td>
+					<th>否</th>
+				</tr>
+				<tr>
+					<td>河道水质有无异常变化</td>
+					<th>否</th>
+				</tr>
+			</table>
+			<h5>其他问题</h5>
+			<textarea disabled="disabled" ></textarea>
+			<h5>处理情况</h5>
+			<textarea disabled="disabled"></textarea>
+		</div>
+		
+	</body>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		
+		</script>
+</html>

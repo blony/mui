@@ -12,13 +12,24 @@
 		.mui-bar {
 			background-color: #007AFF;
 		}
+		
 		.mui-bar .mui-btn-link {
-				color: #fff;
+			color: #fff;
 		}
+		
 		.mui-title {
-		color: #FFF;
+			color: #FFF;
+		}
+		
+		.mui-page-content input {
+			margin-bottom: 0;
+		}
+		.mui-switch.mui-active {
+		    border-color: #007AFF;
+		    background-color: #007AFF;
 		}
 	</style>
+
 	<body>
 		<header class=" mui-bar-nav">
 
@@ -29,61 +40,58 @@
 					<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
 					<span class="mui-icon mui-icon-left-nav"></span>
 				</button>
-					<button id="submit" class="mui-btn mui-btn-blue mui-btn-link mui-pull-right">发送</button>
+					<button id="submit" class="mui-btn mui-btn-blue mui-btn-link mui-pull-right">提交</button>
 					<h1 class="mui-center mui-title">我要建议</h1>
 				</div>
 				<div class="mui-page-content">
-					<div class="mui-content-padded">
-						<div class="mui-inline">问题和意见</div>
-						<a class="mui-pull-right mui-inline" href="#popover">
-							快捷输入
-							<span class="mui-icon mui-icon-arrowdown"></span>
-						</a>
-						<!--快捷输入具体内容，开发者可自己替换常用语-->
-						<div id="popover" class="mui-popover">
-							<div class="mui-popover-arrow"></div>
-							<div class="mui-scroll-wrapper">
-								<div class="mui-scroll">
-									<ul class="mui-table-view">
-										<!--仅流应用环境下显示-->
-										<li class="mui-table-view-cell stream">
-											<a href="#">桌面快捷方式创建失败</a>
-										</li>
-										<li class="mui-table-view-cell">
-											<a href="#">界面显示错乱</a>
-										</li>
-										<li class="mui-table-view-cell">
-											<a href="#">启动缓慢，卡出翔了</a>
-										</li>
-										<li class="mui-table-view-cell">
-											<a href="#">偶发性崩溃</a>
-										</li>
-										<li class="mui-table-view-cell">
-											<a href="#">UI无法直视，丑哭了</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
+					<h4 style="margin: 15px 0 5px 10px;">建议河道：<span style="color: #007AFF;">潮白河</span></h4>
+					<p>建议人姓名</p>
+					<div class="mui-input-row">
+						<input id='contact' type="text" class="mui-input-clear contact" placeholder="(请输入您的真实姓名)" />
+					</div>
+					<p>建议人联系方式</p>
+					<div class="mui-input-row">
+						<input id='contact' type="text" class="mui-input-clear contact" placeholder="(请输入您的联系方式)" />
+					</div>
+					<p>建议主题</p>
+					<div class="mui-input-row">
+						<input id='contact' type="text" class="mui-input-clear contact" />
+						<p>建议内容</p>
 					</div>
 					<div class="row mui-input-row">
-						<textarea id='question' class="mui-input-clear question" placeholder="请详细描述你的问题和意见..."></textarea>
+						<textarea id='question' class="mui-input-clear question" placeholder="请详细描述您的问题和意见..."></textarea>
 					</div>
-					<p>图片(选填,提供问题截图,总大小10M以下)</p>
-					<div id='image-list' class="row image-list"></div>
-					<p>QQ/邮箱</p>
-					<div class="mui-input-row">
-						<input id='contact' type="text" class="mui-input-clear contact" placeholder="(选填,方便我们联系你 )" />
-					</div><br />
+					<!--<p>图片(选填,提供问题截图,总大小10M以下)</p>
+					<div id='image-list' class="row image-list"></div>-->
+					<br />
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell">
+							<span></span>
+							<div class="mui-switch mui-switch-mini">
+								<div class="mui-switch-handle"></div>
+							</div>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>
 	</body>
 	<script src="../js/mui.min.js"></script>
 	<script src="../js/mui.view.js "></script>
-	<script src='../js/feedback.js'></script>
+	<!--<script src='../js/feedback.js'></script>-->
 	<script type="text/javascript">
 		mui.init()
+		mui('.mui-content .mui-switch').each(function() { //循环所有toggle
+			//toggle.classList.contains('mui-active') 可识别该toggle的开关状态
+			this.parentNode.querySelector('span').innerText = '匿名：' + (this.classList.contains('mui-active') ? '是' : '否');
+			/**
+			 * toggle 事件监听
+			 */
+			this.addEventListener('toggle', function(event) {
+				//event.detail.isActive 可直接获取当前状态
+				this.parentNode.querySelector('span').innerText = '匿名：' + (event.detail.isActive ? '是' : '否');
+			});
+		});
 	</script>
 
 </html>
