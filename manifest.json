@@ -99,7 +99,7 @@
         },
         "NativeObj":{
         	"description": "原生对象"
-        }
+        },"Zip":{}
 	},
 	"plus": {
 		"splashscreen": {
@@ -281,12 +281,14 @@
 					"css/mui.min.css",
 					"js/jquery.min.js",
 					"images/homeTOP.png",
-					"js/mui.min.js"
+					"js/mui.min.js",
+					"js/mui.js"
 				],
 				"refer": [
 					"homepage/waterquality.html",
 					"homepage/riversection.html",
-					"homepage/riversearch.html"
+					"homepage/riversearch.html",
+					"riverinfopage/rivertemplet.html"
 				],
 				"priority": 0
 			},
@@ -412,7 +414,8 @@
 			},
 			"tousupage/ComplaintInfo.html": {
 				"resources": [
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"js/mui.min.js"
 				],
 				"refer": [],
 				"priority": 0
@@ -457,7 +460,9 @@
 				"resources": [
 					"images/complaint.png",
 					"images/proposal.png",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"js/jquery.min.js",
+					"js/mui.min.js"
 				],
 				"refer": [
 					"tousupage/ComplaintInfo.html",
@@ -507,7 +512,8 @@
 			},
 			"riverinfopage/inspectionresult.html": {
 				"resources": [
-					"css/mui.css"
+					"css/mui.css",
+					"js/mui.min.js"
 				],
 				"refer": [],
 				"priority": 0
