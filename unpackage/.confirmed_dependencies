@@ -1,291 +1,297 @@
 {
-	"index.html": {
-		"resources": [
-			"js/mui.min.js",
-			"css/mui.min.css",
-			"tab-webview-subpage-about.html",
-			"fonts/mui.ttf",
-			"home.html",
-			"js/iconfont.js",
-			"css/iconfont.css",
-			"fonts/iconfont.ttf",
-			"tmpl/home.html",
-			"js/mui.js"
-		],
-		"refer": [
-			"tab-webview-subpage-about.html",
-			"tab-webview-subpage-setting.html",
-			"tab-webview-subpage-chat.html",
-			"tab-webview-subpage-contact.html",
-			"home.html",
-			"news.html",
-			"user.html",
-			"tousu.html",
-			"tmpl/news.html",
-			"tmpl/user.html",
-			"tmpl/home.html",
-			"tmpl/tousu.html",
-			"tmpl/riverinfo.html"
-		]
-	},
-	"tab-webview-subpage-about.html": {
-		"resources": [
-			"css/mui.min.css"
-		]
-	},
-	"home.html": {
-		"resources": [
-			"js/jquery.min.js",
-			"images/homeTOP.png",
-			"css/mui.min.css",
-			"homepage/waterquality.html"
-		],
-		"refer": [
-			"homepage/waterquality.html"
-		]
-	},
-	"news.html": {
-		"resources": [
-			"css/mui.min.css",
-			"js/mui.pullToRefresh.js",
-			"js/mui.pullToRefresh.material.js",
-			"images/river.png",
-			"images/user.png",
-			"images/news.png"
-		]
-	},
-	"homepage/waterquality.html": {
-		"resources": [
-			"css/mui.min.css"
-		]
-	},
-	"tmpl/news.html": {
-		"resources": [
-			"js/mui.pullToRefresh.js",
-			"js/mui.pullToRefresh.material.js",
-			"css/mui.min.css",
-			"images/river.png",
-			"tmpl/news/newsinfo.html",
-			"images/river2.png",
-			"images/river3.png",
-			"images/river4.png",
-			"images/river1.png",
-			"data/newsdata/news.json",
-			"images/news.png",
-			"images/user.png",
-			"js/mui.min.js"
-		],
-		"refer": [
-			"tmpl/detail.html",
-			"tmpl/news/newsinfo.html",
-			"tmpl/news/notices.html",
-			"tmpl/news/dailyknows.html"
-		]
-	},
-	"tmpl/home.html": {
-		"resources": [
-			"css/mui.min.css",
-			"js/jquery.min.js",
-			"images/homeTOP.png",
-			"js/mui.min.js",
-			"js/mui.js"
-		],
-		"refer": [
-			"homepage/waterquality.html",
-			"homepage/riversection.html",
-			"homepage/riversearch.html",
-			"riverinfopage/rivertemplet.html"
-		]
-	},
-	"tmpl/news/newsinfo.html": {
-		"resources": [
-			"css/mui.min.css"
-		]
-	},
-	"tmpl/detail.html": {
-		"resources": [
-			"data/data01.json",
-			"css/mui.min.css",
-			"data/data04.json",
-			"data/data02.json",
-			"data/data03.json",
-			"js/mui.js"
-		]
-	},
-	"tmpl/user.html": {
-		"resources": [
-			"images/river4.jpg",
-			"images/sï¿½.png",
-			"images/6ï¿½.png",
-			"images/(7.png",
-			"images/userlogin.png",
-			"css/mui.min.css",
-			"images/like.png",
-			"images/about.png",
-			"js/mui.min.js"
-		],
-		"refer": [
-			"userpage/login.html",
-			"login/login.html",
-			"userpage/mycollection.html",
-			"userpage/about.html"
-		]
-	},
-	"homepage/riversection.html": {
-		"resources": [
-			"images/testmap.png",
-			"css/mui.min.css"
-		]
-	},
-	"userpage/login.html": {
-		"resources": [
-			"userpage/js/app.js",
-			"userpage/js/mui.enterfocus.js",
-			"css/mui.min.css"
-		],
-		"refer": [
-			"index.html",
-			"userpage/reg.html",
-			"userpage/forget_password.html"
-		]
-	},
-	"userpage/reg.html": {
-		"resources": [
-			"userpage/css/style.css",
-			"css/mui.min.css"
-		]
-	},
-	"userpage/forget_password.html": {
-		"resources": [
-			"userpage/css/style.css",
-			"css/mui.min.css"
-		]
-	},
-	"login/login.html": {
-		"resources": [
-			"js/login.js",
-			"css/mui.min.css",
-			"js/mui.enterfocus.js"
-		],
-		"refer": [
-			"login/reg.html",
-			"login/forget_password.html"
-		]
-	},
-	"login/forget_password.html": {
-		"resources": [
-			"css/mui.min.css"
-		]
-	},
-	"userpage/mycollection.html": {
-		"resources": [
-			"css/mui.css",
-			"images/delete.png"
-		]
-	},
-	"tmpl/tousu.html": {
-		"resources": [
-			"css/mui.min.css",
-			"images/processed.png",
-			"images/untreated.png",
-			"css/mui.css",
-			"images/river2.png",
-			"images/river1.png",
-			"js/mui.js",
-			"js/mui.min.js"
-		],
-		"refer": [
-			"tousupage/ComplaintInfo.html",
-			"tousupage/ComplaintInfo2.html"
-		]
-	},
-	"tousupage/ComplaintInfo.html": {
-		"resources": [
-			"css/mui.min.css",
-			"js/mui.min.js"
-		]
-	},
-	"tousupage/ComplaintInfo2.html": {
-		"resources": [
-			"css/mui.min.css"
-		]
-	},
-	"homepage/riversearch.html": {
-		"resources": [
-			"css/mui.min.css",
-			"images/river6.jpg",
-			"images/river9.jpg",
-			"images/river11.jpg",
-			"images/river1.jpg",
-			"images/river2.jpg",
-			"images/river8.jpg"
-		]
-	},
-	"tmpl/riverinfo.html": {
-		"resources": [
-			"css/mui.min.css",
-			"images/river7.jpg",
-			"images/river9.jpg",
-			"images/river2.jpg",
-			"images/river6.jpg",
-			"images/river4.jpg",
-			"images/heart.png",
-			"images/redheart.png"
-		],
-		"refer": [
-			"riverinfopage/rivertemplet.html"
-		]
-	},
-	"riverinfopage/rivertemplet.html": {
-		"resources": [
-			"images/complaint.png",
-			"images/proposal.png",
-			"css/mui.min.css",
-			"js/jquery.min.js",
-			"js/mui.min.js"
-		],
-		"refer": [
-			"tousupage/ComplaintInfo.html",
-			"tousupage/mycomplaint.html",
-			"tousupage/mysuggestion.html",
-			"riverinfopage/inspectionresult.html"
-		]
-	},
-	"userpage/about.html": {
-		"resources": [
-			"css/feedback.css",
-			"images/riverlogo.png",
-			"js/feedback.js",
-			"js/mui.view.js",
-			"css/mui.min.css"
-		],
-		"refer": [
-			"tmpl/guide.html"
-		]
-	},
-	"tmpl/guide.html": {
-		"resources": [
-			"css/mui.min.css"
-		]
-	},
-	"tousupage/mycomplaint.html": {
-		"resources": [
-			"css/feedback.css",
-			"css/mui.min.css",
-			"js/feedback.js",
-			"js/mui.view.js"
-		]
-	},
-	"tousupage/mysuggestion.html": {
-		"resources": [
-			"css/feedback.css",
-			"css/mui.min.css"
-		]
-	},
-	"riverinfopage/inspectionresult.html": {
-		"resources": [
-			"css/mui.css",
-			"js/mui.min.js"
-		]
-	}
+  "index.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "tab-webview-subpage-about.html",
+      "fonts/mui.ttf",
+      "home.html",
+      "js/iconfont.js",
+      "css/iconfont.css",
+      "fonts/iconfont.ttf",
+      "tmpl/home.html",
+      "js/mui.js"
+    ],
+    "refer": [
+      "tab-webview-subpage-about.html",
+      "tab-webview-subpage-setting.html",
+      "tab-webview-subpage-chat.html",
+      "tab-webview-subpage-contact.html",
+      "home.html",
+      "news.html",
+      "user.html",
+      "tousu.html",
+      "tmpl/news.html",
+      "tmpl/user.html",
+      "tmpl/home.html",
+      "tmpl/tousu.html",
+      "tmpl/riverinfo.html"
+    ]
+  },
+  "tab-webview-subpage-about.html": {
+    "resources": [
+      "css/mui.min.css"
+    ]
+  },
+  "home.html": {
+    "resources": [
+      "js/jquery.min.js",
+      "images/homeTOP.png",
+      "css/mui.min.css",
+      "homepage/waterquality.html"
+    ],
+    "refer": [
+      "homepage/waterquality.html"
+    ]
+  },
+  "news.html": {
+    "resources": [
+      "css/mui.min.css",
+      "js/mui.pullToRefresh.js",
+      "js/mui.pullToRefresh.material.js",
+      "images/river.png",
+      "images/user.png",
+      "images/news.png"
+    ]
+  },
+  "homepage/waterquality.html": {
+    "resources": [
+      "css/mui.min.css"
+    ]
+  },
+  "tmpl/news.html": {
+    "resources": [
+      "js/mui.pullToRefresh.js",
+      "js/mui.pullToRefresh.material.js",
+      "css/mui.min.css",
+      "images/river.png",
+      "tmpl/news/newsinfo.html",
+      "images/river2.png",
+      "images/river3.png",
+      "images/river4.png",
+      "images/river1.png",
+      "data/newsdata/news.json",
+      "images/news.png",
+      "images/user.png",
+      "js/mui.min.js"
+    ],
+    "refer": [
+      "tmpl/detail.html",
+      "tmpl/news/newsinfo.html",
+      "tmpl/news/notices.html",
+      "tmpl/news/dailyknows.html"
+    ]
+  },
+  "tmpl/home.html": {
+    "resources": [
+      "css/mui.min.css",
+      "js/jquery.min.js",
+      "images/homeTOP.png",
+      "js/mui.min.js",
+      "js/mui.js",
+      "images/river2.jpg",
+      "images/river9.jpg",
+      "images/river3.jpg",
+      "images/river4.jpg",
+      "images/river11.jpg"
+    ],
+    "refer": [
+      "homepage/waterquality.html",
+      "homepage/riversection.html",
+      "homepage/riversearch.html",
+      "riverinfopage/rivertemplet.html"
+    ]
+  },
+  "tmpl/news/newsinfo.html": {
+    "resources": [
+      "css/mui.min.css"
+    ]
+  },
+  "tmpl/detail.html": {
+    "resources": [
+      "data/data01.json",
+      "css/mui.min.css",
+      "data/data04.json",
+      "data/data02.json",
+      "data/data03.json",
+      "js/mui.js"
+    ]
+  },
+  "tmpl/user.html": {
+    "resources": [
+      "images/river4.jpg",
+      "images/sý.png",
+      "images/6ý.png",
+      "images/(7.png",
+      "images/userlogin.png",
+      "css/mui.min.css",
+      "images/like.png",
+      "images/about.png",
+      "js/mui.min.js"
+    ],
+    "refer": [
+      "userpage/login.html",
+      "login/login.html",
+      "userpage/mycollection.html",
+      "userpage/about.html"
+    ]
+  },
+  "homepage/riversection.html": {
+    "resources": [
+      "images/testmap.png",
+      "css/mui.min.css"
+    ]
+  },
+  "userpage/login.html": {
+    "resources": [
+      "userpage/js/app.js",
+      "userpage/js/mui.enterfocus.js",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "index.html",
+      "userpage/reg.html",
+      "userpage/forget_password.html"
+    ]
+  },
+  "userpage/reg.html": {
+    "resources": [
+      "userpage/css/style.css",
+      "css/mui.min.css"
+    ]
+  },
+  "userpage/forget_password.html": {
+    "resources": [
+      "userpage/css/style.css",
+      "css/mui.min.css"
+    ]
+  },
+  "login/login.html": {
+    "resources": [
+      "js/login.js",
+      "css/mui.min.css",
+      "js/mui.enterfocus.js"
+    ],
+    "refer": [
+      "login/reg.html",
+      "login/forget_password.html"
+    ]
+  },
+  "login/forget_password.html": {
+    "resources": [
+      "css/mui.min.css"
+    ]
+  },
+  "userpage/mycollection.html": {
+    "resources": [
+      "css/mui.css",
+      "images/delete.png"
+    ]
+  },
+  "tmpl/tousu.html": {
+    "resources": [
+      "css/mui.min.css",
+      "images/processed.png",
+      "images/untreated.png",
+      "css/mui.css",
+      "images/river2.png",
+      "images/river1.png",
+      "js/mui.js",
+      "js/mui.min.js"
+    ],
+    "refer": [
+      "tousupage/ComplaintInfo.html",
+      "tousupage/ComplaintInfo2.html"
+    ]
+  },
+  "tousupage/ComplaintInfo.html": {
+    "resources": [
+      "css/mui.min.css",
+      "js/mui.min.js"
+    ]
+  },
+  "tousupage/ComplaintInfo2.html": {
+    "resources": [
+      "css/mui.min.css",
+      "js/mui.min.js"
+    ]
+  },
+  "homepage/riversearch.html": {
+    "resources": [
+      "css/mui.min.css",
+      "images/river6.jpg",
+      "images/river9.jpg",
+      "images/river11.jpg",
+      "images/river1.jpg",
+      "images/river2.jpg",
+      "images/river8.jpg"
+    ]
+  },
+  "tmpl/riverinfo.html": {
+    "resources": [
+      "css/mui.min.css",
+      "images/river7.jpg",
+      "images/river9.jpg",
+      "images/river2.jpg",
+      "images/river6.jpg",
+      "images/river4.jpg",
+      "images/heart.png",
+      "images/redheart.png"
+    ],
+    "refer": [
+      "riverinfopage/rivertemplet.html"
+    ]
+  },
+  "riverinfopage/rivertemplet.html": {
+    "resources": [
+      "images/complaint.png",
+      "images/proposal.png",
+      "css/mui.min.css",
+      "js/jquery.min.js",
+      "js/mui.min.js"
+    ],
+    "refer": [
+      "tousupage/ComplaintInfo.html",
+      "tousupage/mycomplaint.html",
+      "tousupage/mysuggestion.html",
+      "riverinfopage/inspectionresult.html"
+    ]
+  },
+  "userpage/about.html": {
+    "resources": [
+      "css/feedback.css",
+      "images/riverlogo.png",
+      "js/feedback.js",
+      "js/mui.view.js",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "tmpl/guide.html"
+    ]
+  },
+  "tmpl/guide.html": {
+    "resources": [
+      "css/mui.min.css"
+    ]
+  },
+  "tousupage/mycomplaint.html": {
+    "resources": [
+      "css/feedback.css",
+      "css/mui.min.css",
+      "js/feedback.js",
+      "js/mui.view.js"
+    ]
+  },
+  "tousupage/mysuggestion.html": {
+    "resources": [
+      "css/feedback.css",
+      "css/mui.min.css"
+    ]
+  },
+  "riverinfopage/inspectionresult.html": {
+    "resources": [
+      "css/mui.css",
+      "js/mui.min.js"
+    ]
+  }
 }
